@@ -1,1 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#header {
+    flex: 0.2;
+    position: relative;
+}
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    height:100%;
+    width: 40%;
+    list-style: none;
+    align-items: center;
+}
+#menu>li {
+    flex:0.04 0 auto;
+}
+#menu>li:hover {
+    color: hsl(258, 55%, 25%);
+    font-weight: 800;
+}
+
+.container-upper {
+    flex: 0.7;
+    line-height: 50px;
+    position: relative;
+}
+.container-upper>div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 60%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: xx-large;
+    color: hsl(0, 0%, 5%);
+}
+.container-lower {
+    flex: 0.1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    /*Design properties*/
+    background-color: hsl(0, 0%, 95%);
+    border-top-width: 10px;
+    border-top-style: solid;
+    border-top-color: hsl(0, 0%, 95%);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.container-lower>div {
+    flex: 0.3;
+    padding: 5% 4% 4% 4%;
+}
+
+
+h3, .page-heading {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+}
+
+h3 {
+    padding-bottom: 10%;
+}
+
+p, #menu > li {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+    color: hsl(0, 0%, 40%); 
+}
+
 
