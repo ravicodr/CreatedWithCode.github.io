@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Zen+Kurenaido&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: hsl(0deg, 0%, 80%);
+    box-shadow: 0 0 3px rgba(0,0,0,0.5); 
+}
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden !important;
+    font-size: 30px;
+}
+body {
+    background: white;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+header {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 60px;
+    width: 100vw;
+    font-size: 0.6rem;
+    box-shadow: 0px 0px 7px 1px hsl(0deg, 0%, 80%);
+    z-index: 1000;
+}
+.headerMenuIcon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+}
+.hmi-item {
+    width: 24px;
+    height: 3px;
+    border: 0px solid;
+    border-radius: 5px;
+    background-color: rgb(0, 136, 226);
+}
+.hmi-item.hmi-upper {
+    position: absolute;
+    top: 0%;
+}
+.hmi-item.hmi-upper:hover {
+    animation: rotate45 500ms ease 0s;
+    animation-fill-mode: forwards;
+}
+.hmi-item.hmi-mid {
+    position: absolute;
+    top: 45%;
+}
+.hmi-item.hmi-lower {
+    position: absolute;
+    bottom: 0%;
+}
+.headerLogo {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-size: 1rem;
+    color: rgb(0, 136, 226);
+}
+.headerNav {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    color: hsl(0deg, 0%, 10%);
+}
+.navItem:hover {
+    color: rgb(0, 136, 226);
+}
+@keyframes rotate45 {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(45deg);
+    }
+}

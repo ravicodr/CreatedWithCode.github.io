@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Zen+Kurenaido&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+    font-size: 30px;
+}
+body {
+    background: white;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+.mpct-container {
+    display: flex;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 75vw;
+    height: 100%;
+    border-right: 1px hsl(0deg, 0%, 80%) solid;
+    overflow: scroll;
+}
+.mpc-timeline {
+    display: flex;
+    flex-direction: column;
+    height: 2400px;
+    width: 6%;
+    font-size: 0.5rem;
+}
+.mpct-hour {
+    min-height: 0;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+.mpct-hour.alternate {
+    background-color: hsl(0deg, 0%, 95%);
+}

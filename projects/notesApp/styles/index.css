@@ -1,0 +1,73 @@
+.landingContainer {
+    position: absolute;
+    top: 10vh;
+    left:0%;
+    width: 100vw;
+    height: 90vh;
+    z-index: 10;
+}
+.lc-Grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    position: absolute;
+    width: 60vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.lc-l-Title {
+    font-size: 1.4rem;
+    color: rgb(0, 136, 226);
+}
+.lc-l-Content {
+    font-size: 0.6rem;
+    color: white;
+    position: relative;
+    left: 10%;
+
+}
+.getStarted {
+    width: 100%;
+    text-align: center;
+}
+.lc-gs-Title {
+    font-size: 1rem;
+    color: rgb(0, 136, 226);
+}
+.lc-gs-Content {
+    display: inline-block;
+    text-align: inherit;
+    width: 100px;
+    height: 40px;
+    font-size: 0.6rem;
+    font-weight: bold;
+    line-height: 40px;
+}
+.lc-gs-Content.loginButton {
+    background-color: white;
+    border: 0px white solid;
+    border-radius: 15px;
+    color: hsl(0deg,0%,20%);
+    box-shadow: 2px 2px 10px -5px rgba(255,255,255,0.4);
+}
+.lc-gs-Content.loginButton:hover {
+    background-color: rgb(0, 136, 226);
+    color: whitesmoke;
+}
+.lc-gs-Content.signUpButton {
+    color: whitesmoke;
+}
+.lc-gs-Content.signUpButton:hover {
+    color:rgb(0, 136, 226);
+    text-decoration: underline;
+}
+.loginBox {
+    display: none;
+    position: absolute;
+    left: 0%;
+    bottom:0%;
+    width: 100vw;
+    height: 25vh;
+}

@@ -1,0 +1,183 @@
+.accountBtn {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-image: url("https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/100/000000/external-account-essential-mobile-apps-inipagistudio-mixed-inipagistudio.png");
+    background-size: contain;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 60px;
+    left: 20%;
+    width: 75%;
+    border-right: 1px hsl(0deg, 0%, 80%) solid;
+    z-index: 2000;
+}
+.tools-sidePanel {
+    position: absolute;
+    top: 60px;
+    right: 0%;
+    height: 92%;
+    width: 5%;
+}
+.sidePanel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 20vw;
+    position: absolute;
+    padding: 10px;
+    top: 60px;
+    left: 0%;
+    font-size: 0.6rem;
+    z-index: 999;
+    border-right: 1px hsl(0deg, 0%, 80%) solid;
+    box-shadow: 1px 5px 8px 1px hsl(0deg, 0%, 80%);
+}
+.sp-item {
+    border-bottom: 1px hsl(0deg, 0%, 80%) solid;
+}
+.sp-item > h6{
+    color: rgb(0, 136, 226);
+}
+.spp, .spo {
+    /* font-weight: bold; */
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+.spp:hover, .spo:hover {
+    background-color: hsl(0deg, 0%, 90%);
+}
+.sp-calendar {
+    flex: 3;
+}
+.spc-container {
+    margin-top: 10px;
+    width: 100%;
+    height: 75%;
+    background-color: hsl(0deg, 0%, 95%);
+    border-radius: 15px;
+}
+.sp-profile {
+    flex: 2;
+}
+.sp-others {
+    flex: 3;
+    border: none;
+}
+.upcomingTasks {
+    width: 100%;
+    min-height: 170px;
+    max-height: 250px;
+    padding: 10px;
+}
+.ut-flexContainer {
+    /* position: absolute; */
+    width: 98%;
+    height: 70%;
+    top: 24%;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+}
+.ut-task {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    width: 25%;
+    height: 100%;
+    padding: 10px;
+    background-color: hsl(0deg, 0%, 95%);
+    border-radius: 15px;
+    font-size: 0.5rem;
+}
+.utt-time {
+    flex: 1;
+
+}
+.utt-detail {
+    flex: 4;
+}
+.ut-task > h6 {
+    flex: 1;
+    text-align: center;
+}
+h4 {
+    color: rgb(0, 136, 226);
+    font-size: 0.8rem;
+}
+h6 {
+    font-size: 0.6rem;
+}
+.mpct-container {
+    position: relative;
+    width: 100%;
+    overflow: auto;
+}
+.mpc-timeline {
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    font-size: 0.5rem;
+    overflow: hidden;
+}
+.mpct-hour {
+    min-height: 0;
+    height: 100px;
+    text-align: center;
+    /* line-height: 100px; */
+}
+/* .mpct-hour.alternate {
+    background-color: hsl(0deg, 0%, 95%);
+} */
+.mpc-header {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+    padding-left: 60px;
+    font-size: 0.5rem;
+    /* background-color: hsl(0deg, 0%, 95%); */
+    border-bottom: 1px hsl(0deg, 0%, 80%) solid;
+    /* box-shadow: -1px 3px 4px 1px hsl(0deg, 0%, 80%); */
+}
+.mpch-item > img{
+    width: 20%;
+}
+.mpc-days {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-size: 0.6rem;
+}
+.mpcd {
+    flex: 1;
+}
+.mpct-grid {
+    position: absolute;
+    top: 0%;
+    left: 60px;
+    width: 94%;
+    display: flex;
+    align-items: stretch;
+}
+.mpctg-day {
+    flex: 1;
+
+}
+.mpctg-cell {
+    height: 100px;
+    border-bottom: 1px hsl(0deg, 0%, 80%) solid;
+    border-right: 1px hsl(0deg, 0%, 80%) solid;
+}
+.mpctg-cell:hover {
+    background-color: hsl(0deg, 0%, 95%);
+}
