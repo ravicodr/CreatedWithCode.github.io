@@ -20,12 +20,17 @@
 html, body {
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden !important;
+    overflow: hidden !important;
     font-size: 30px;
 }
 body {
     background: white;
     font-family: 'Zen Kurenaido', sans-serif;
+}
+@media (max-width: 600px) {
+    html, body {
+        font-size: 18px;
+    }
 }
 header {
     position: fixed;

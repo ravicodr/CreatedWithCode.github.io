@@ -1,6 +1,6 @@
 .landingContainer {
     position: absolute;
-    top: 10vh;
+    top: 60px;
     left:0%;
     width: 100vw;
     height: 90vh;
@@ -12,18 +12,18 @@
     gap: 30px;
     align-items: center;
     position: absolute;
-    width: 60vw;
+    width: 100vw;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 .lc-l-Title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: rgb(0, 136, 226);
 }
 .lc-l-Content {
     font-size: 0.6rem;
-    color: white;
+    color: rgb(0, 136, 226);
     position: relative;
     left: 10%;
 
@@ -41,33 +41,167 @@
     text-align: inherit;
     width: 100px;
     height: 40px;
+    margin-top: 20px;
     font-size: 0.6rem;
     font-weight: bold;
     line-height: 40px;
 }
 .lc-gs-Content.loginButton {
-    background-color: white;
+    background-color: rgb(0, 136, 226);
     border: 0px white solid;
     border-radius: 15px;
-    color: hsl(0deg,0%,20%);
-    box-shadow: 2px 2px 10px -5px rgba(255,255,255,0.4);
+    color: white;
 }
 .lc-gs-Content.loginButton:hover {
-    background-color: rgb(0, 136, 226);
-    color: whitesmoke;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 6px 0px hsl(0deg, 0%, 80%);
 }
 .lc-gs-Content.signUpButton {
-    color: whitesmoke;
+    color: rgb(0, 136, 226);
 }
 .lc-gs-Content.signUpButton:hover {
-    color:rgb(0, 136, 226);
     text-decoration: underline;
+    transform: scale(1.1);
 }
 .loginBox {
-    display: none;
     position: absolute;
     left: 0%;
     bottom:0%;
     width: 100vw;
-    height: 25vh;
+    height: calc(100vh - 60px);
+    background-color: white;
+    font-size: 0.6rem;
+    z-index: 500;
+    border-top: 1px hsl(0deg, 0%, 80%) solid;
+    transition: 300ms ease-in;
+}
+.loginBox.hidden {
+    transform: translateY(100%);
+}
+.loginBoxClose {
+    border: none;
+    background-color: white;
+    padding: 20px;
+    z-index: 600;
+}
+.loginBoxClose:hover {
+    background-color: hsl(0deg, 0%, 80%);
+}
+.loginForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.loginForm.hidden {
+    display: none;
+}
+.signUpForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 499;
+}
+.signUpForm.hidden {
+    display: none;
+}
+.lb-username, .lb-password, .lb-email {
+    width: 100%;
+    min-height: 50px;
+    padding: 10px;
+    background-color: hsl(0deg, 0%, 97%);
+    border: 1px hsl(0deg, 0%, 80%) solid;
+    border-radius: 10px;
+}
+.lf-heading {
+    padding: 5px;
+}
+.lf-heading > span {
+    font-size: 0.5rem;
+    color: rgb(0, 136, 226);
+    padding-left: 10px;
+    border-left: 3px hsl(0deg, 0%, 80%) solid;
+}
+.lb-username:hover, .lb-password:hover, .lb-email:hover {
+    background-color: white;
+    box-shadow: inset 0px 0px 2px 1px hsl(0deg, 0%, 80%);
+}
+.lb-username:focus, .lb-password:focus, .lb-email:focus {
+    outline: none;
+    border: 1px rgb(0, 136, 226) solid;
+    background-color: white;
+    box-shadow: inset 0px 0px 2px 1px hsl(0deg, 0%, 80%);
+}
+.input-group {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    align-self: center;
+    align-items: center;
+}
+.input-group > button {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(0, 136, 226);
+    border: 0px hsl(0deg, 0%, 80%) solid;
+    padding-left: 30px;
+    border-radius: 50px;
+    
+}
+.input-group > svg {
+    position: absolute;
+    right: 10px;
+}
+.submit-group {
+    position: relative;
+}
+.submit-group > button {
+    width: 150px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: rgb(0, 136, 226);
+    text-align: left;
+    line-height: 30px;
+    padding-left: 20px;
+    border: 0px solid;
+    color: white;
+    box-shadow: 2px 3px 5px 1px hsl(0deg, 0%, 50%);
+}
+.submit-group > button:hover {
+    transform: scale(1.1);
+}
+.submit-group > svg {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+
+}
+@media (max-width: 600px) {
+    .loginBox {
+        height: 55%;
+        width: 100%;
+    }
+    .loginForm, .signUpForm {
+        width: 90%;
+    }
+    .loginBoxClose > svg {
+        width: 24px;
+        height: 24px;
+    }
+    .loginBoxClose {
+        padding: 10px;
+    }
 }

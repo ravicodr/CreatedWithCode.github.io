@@ -3,9 +3,11 @@
     <head>
         <title>NotesXY</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="theme-color" content="#03c2fc">
         <link rel="stylesheet" href="styles/common.css">
         <link rel="stylesheet" href="styles/dashboard.css">
+        <script src="scripts/main.js" defer></script>
     </head>
     <body>
         <header>
@@ -51,6 +53,11 @@
                 var height = (window.innerHeight - 60).toString();
                 document.getElementsByClassName('tools-sidePanel')[0].style.height = height+"px";
             </script>
+            <div class="tsp-item addTaskButton">
+                <div class="atb-icon horizontal"></div>
+                <div class="atb-icon vertical"></div>
+                <div class="atb-text">Add An Event</div>
+            </div>
         </div>
         <div class="main-content">
             <script>

@@ -18,6 +18,12 @@
     width: 75%;
     border-right: 1px hsl(0deg, 0%, 80%) solid;
     z-index: 2000;
+    transition: 200ms ease-in;
+    transition-delay: 50ms;
+}
+.main-content.fullWidth {
+    left: 0%;
+    width: 95%;
 }
 .tools-sidePanel {
     position: absolute;
@@ -25,6 +31,40 @@
     right: 0%;
     height: 92%;
     width: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tsp-item {
+    position: relative;
+    padding: 5px;
+    width: 100%;
+    height: 50px;
+}
+.tsp-item:hover {
+    background-color: hsl(0deg, 0%, 95%);
+    transform: scale(1.2);
+
+}
+.tsp-item.addTaskButton .atb-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    height: 15px;
+    background-color: rgb(0, 136, 226);
+    /* box-shadow: 1px 5px 8px 1px hsl(0deg, 0%, 80%); */
+    border-radius: 10px;
+    z-index: 100;
+}
+.tsp-item.addTaskButton .atb-icon.vertical {
+    z-index: 100;
+    /* box-shadow: 0px 0px 8px 1px hsl(0deg, 0%, 80%); */
+    transform: translate(-50%,-50%) rotateZ(90deg);
+}
+.tsp-item.addTaskButton .atb-text {
+    display: none;
 }
 .sidePanel {
     display: flex;
@@ -39,6 +79,10 @@
     z-index: 999;
     border-right: 1px hsl(0deg, 0%, 80%) solid;
     box-shadow: 1px 5px 8px 1px hsl(0deg, 0%, 80%);
+    transition: 200ms ease-in;
+}
+.sidePanel.hidden {
+    left: -20%;
 }
 .sp-item {
     border-bottom: 1px hsl(0deg, 0%, 80%) solid;
@@ -75,18 +119,19 @@
 }
 .upcomingTasks {
     width: 100%;
-    min-height: 170px;
-    max-height: 250px;
+    min-height: 200px;
     padding: 10px;
+    padding-left: 2%;
 }
 .ut-flexContainer {
     /* position: absolute; */
     width: 98%;
-    height: 70%;
+    height: 85%;
     top: 24%;
     display: flex;
     gap: 15px;
     justify-content: flex-start;
+    padding: 10px;
 }
 .ut-task {
     display: flex;
@@ -95,7 +140,8 @@
     width: 25%;
     height: 100%;
     padding: 10px;
-    background-color: hsl(0deg, 0%, 95%);
+    background-color: hsl(0deg, 0%, 97%);
+    box-shadow: 2px 2px 5px 1px hsl(0deg, 0%, 80%);
     border-radius: 15px;
     font-size: 0.5rem;
 }
@@ -120,6 +166,7 @@ h6 {
 .mpct-container {
     position: relative;
     width: 100%;
+    padding-left: 2%;
     overflow: auto;
 }
 .mpc-timeline {
@@ -179,5 +226,16 @@ h6 {
     border-right: 1px hsl(0deg, 0%, 80%) solid;
 }
 .mpctg-cell:hover {
-    background-color: hsl(0deg, 0%, 95%);
+    background-color: #ffffff;
+    background-image: linear-gradient(135deg, #ffffff 0%, #f1f1f1 80%);
+    box-shadow: 2px 2px 5px 1px hsl(0deg, 0%, 80%);
+    border: none;
+}
+@keyframes slideLeft {
+    0% {
+        left: initial;
+    }
+    100% {
+        left: calc(0% - initial);
+    }
 }

@@ -3,8 +3,10 @@
     <head>
         <title>NotesXY</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/common.css">
         <link rel="stylesheet" href="styles/index.css">
+        <script src="scripts/login.js" defer></script>
     </head>
     <body>
         <header>
@@ -33,14 +35,30 @@
                 </div>
             </div>
         </div>
-        <div class="loginBox">
-            <form class="loginForm">
-                <input id="lb-username" type="text" value="Enter Username">
-                <input id="lb-password" type="password" value="Enter Password">
-                <label for="lb-StaySignedIn">Stay Signed In?</label>
-                <input id="lb-StaySignedIn" type="checkbox">
-                <div class="lf-SubmitButton">
-                    <input type="submit">
+        <div class="loginBox hidden">
+            <button class="loginBoxClose"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="48" height="48"
+                viewBox="0 0 172 172"
+                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#3498db"><path d="M33.73372,23.59961l-10.13411,10.13411l52.26628,52.26628l-52.26628,52.26628l10.13411,10.13411l52.26628,-52.26628l52.26628,52.26628l10.13411,-10.13411l-52.26628,-52.26628l52.26628,-52.26628l-10.13411,-10.13411l-52.26628,52.26628z"></path></g></g></svg></button>
+            <form class="loginForm hidden">
+                <div class="lf-heading">Enter Login Credentials <span><u>Create An Account Instead?</u></span></div>
+                <input class="lb-username" type="text" placeholder="Enter Username">
+                <input class="lb-password" type="password" placeholder="Enter Password">
+                <div class="input-group">
+                    <label for="lb-StaySignedIn">Stay Signed In?</label>
+                    <input class="lb-StaySignedIn" type="checkbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 172 172" style=" fill:#ffffff;"><g transform=""><g fill="white" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M95.7825,37.84c-1.69312,0.26875 -2.92937,1.73344 -2.9025,3.44v27.52h-75.68c-1.89469,0 -3.44,1.54531 -3.44,3.44v27.52c0,1.89469 1.54531,3.44 3.44,3.44h75.68v27.52c0.02688,1.29 0.76594,2.44563 1.92156,3.01c1.15562,0.56438 2.52625,0.44344 3.56094,-0.3225l58.48,-44.72c0.81969,-0.65844 1.29,-1.63937 1.29,-2.6875c0,-1.04812 -0.47031,-2.02906 -1.29,-2.6875l-58.48,-44.72c-0.72562,-0.59125 -1.65281,-0.86 -2.58,-0.7525zM99.76,48.16l49.45,37.84l-49.45,37.84v-24.08c0,-1.89469 -1.54531,-3.44 -3.44,-3.44h-75.68v-20.64h75.68c1.89469,0 3.44,-1.54531 3.44,-3.44z"></path></g></g></g></svg>
+                    <button type="submit" id="loginSubmit"></button>
+                </div>
+            </form>
+            <form class="signUpForm hidden">
+                <div class="lf-heading">Enter Credentials <span><u>Login Instead?</u></span></div>
+                <input class="lb-username" type="text" placeholder="Enter Username">
+                <input class="lb-email" type="email" placeholder="Enter Email Address">
+                <input class="lb-password" type="password" placeholder="Enter Password">
+                <div class="submit-group">
+                    <button type="submit" id="newAccountSubmit">CONTINUE</button>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 172 172" style=" fill:#ffffff;"><g transform=""><g fill="white" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M95.7825,37.84c-1.69312,0.26875 -2.92937,1.73344 -2.9025,3.44v27.52h-75.68c-1.89469,0 -3.44,1.54531 -3.44,3.44v27.52c0,1.89469 1.54531,3.44 3.44,3.44h75.68v27.52c0.02688,1.29 0.76594,2.44563 1.92156,3.01c1.15562,0.56438 2.52625,0.44344 3.56094,-0.3225l58.48,-44.72c0.81969,-0.65844 1.29,-1.63937 1.29,-2.6875c0,-1.04812 -0.47031,-2.02906 -1.29,-2.6875l-58.48,-44.72c-0.72562,-0.59125 -1.65281,-0.86 -2.58,-0.7525zM99.76,48.16l49.45,37.84l-49.45,37.84v-24.08c0,-1.89469 -1.54531,-3.44 -3.44,-3.44h-75.68v-20.64h75.68c1.89469,0 3.44,-1.54531 3.44,-3.44z"></path></g></g></g></svg>
                 </div>
             </form>
         </div>
