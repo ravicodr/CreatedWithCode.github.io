@@ -5,7 +5,7 @@
     width: 100vw;
     left: 0%;
     top: 60px;
-    background: url('landing-sec1-bg.png') no-repeat ;
+    background: url('/clientSample/landing-sec1-bg.png') no-repeat ;
     background-position: center;
     background-size: cover;
 }
