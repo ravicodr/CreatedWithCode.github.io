@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;700&display=swap');
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    --txtAccent: #2c2c2c;
+    --txtLight: #e0e0e0;
+    --product1color: #ffffff;
+    --product2color: #ff7373;
+    --product3color: #45e776;
+    --product4color: #86ddff;
+    --product5color: #e093ff;
+}
+html, body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Akshar', sans-serif;
+    font-size: 36px;
+}
+body {
+    background: url('../media/product1bg.png') no-repeat center;
+    background-size: cover;
+}
+header {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: max-content;
+    padding: 20px 30px;
+    font-size: 0.8rem;
+    z-index: 998;
+}
+/* Common Style */
+.hidden {
+    display: none !important;
+}
+.accentTxt {
+    color: var(--txtAccent);
+}
+.centeredFlex {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.mainHeading {
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+.subHeading {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.lightPara {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+.weight900 {
+    font-weight: 900;
+}
+.noUnderline {
+    border-bottom: none !important;
+    text-decoration: none !important;
+}
+.primaryBtn {
+    min-width: 100px;
+    max-width: 200px;
+    min-height: 40px;
+    background-color: var(--txtAccent);
+    color: var(--txtLight);
+    font-weight: 900;
+    font-size: 0.6rem;
+    border-radius: 25px;
+    padding: 5px 15px;
+    outline: none;
+    border: none;
+}
+/* ----------------------------------------- */
+
+/* Specifics */
+.headerLogo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: 900;
+}
+.mhnIconContainer {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    flex-direction: column !important;
+    z-index: 1000;
+}
+.mhnUpper, .mhnLower {
+    background-color: var(--txtAccent);
+    border-radius: 20px;
+    width: 40px;
+    height: 5px;
+}
+.headerNav {
+    gap: 15px;
+}
+.mnTabs .headerNav {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    font-size: 3rem !important;
+    background: url('../media/product1bg.png') no-repeat center;
+    background-size: cover;
+    z-index: 999;
+}
+.hnListContainer {
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.headerUserIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: var(--txtAccent);
+}
+.productTopSection {
+    position: absolute;
+    top: 80px;
+    left: 0%;
+    width: 100%;
+    height: calc(100vh - 80px);
+}
+.ptsMainImage {
+    position: absolute;
+    bottom: 0%;
+    right: 0px;
+    width: 180px;
+    height: 60%;
+    background: url('../media/product1MainImage.png') no-repeat center;
+    background-size: contain;
+}
+.psInfoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    padding-top: 10px;
+    padding-left: 30px;
+}
+.productSwitchContainer {
+    position: absolute;
+    top: 45%;
+    left: 30px;
+    width: 30%;
+    min-width: 200px;
+    max-width: 300px;
+    height: max-content;
+    justify-content: flex-start !important;
+    gap: 15px;
+}
+.productSwitchBtn {
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+}
+.productSwitchBtn.active {
+    border: 1px #949494 solid !important;
+}
+.buySectionContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    top: 60%;
+    left: 30px;
+}
+#likeBtn {
+    width: 24px;
+    height: 24px;
+    background: url('../media/likeBtnIcon.svg') no-repeat center;
+    background-size: contain;
+    outline: none;
+    border: none;
+}
+.productContentSwitchContainer {
+    flex-direction: column;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    width: 45%;
+    max-width: 300px;
+}
+.pcsd {
+    border-bottom: 1px var(--txtAccent) solid;
+    padding-bottom: 5px;
+    width: 100%;
+}
+.expandIcon2Container {
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+.ei2Item {
+    background-color: var(--txtAccent);
+    width: 2px;
+    height: 15px;
+}
+.ei2Horizontal {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: rotateZ(90deg);
+}
+.ei2Vertical {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transition: transform 500ms ease;
+}
+/* Animations */
+.fade {
+    transition: 500ms ease;
+}
+.moveUp {
+    transition: top 450ms ease;
+}
+.fadeInLeft {
+    transform: translateX(0px);
+    opacity: 1;
+}
+.fadeOutLeft {
+    transform: translateX(-20px);
+    opacity: 0;
+}
+.fadeInRight {
+    transform: translateX(0px);
+    opacity: 1;
+}
+.fadeOutRight {
+    transform: translateX(20px);
+    opacity: 0;
+}
+.top80px {
+    top: 80px !important;
+}
+.top121px {
+    top: 121px !important;
+}
+.top152px {
+    top: 152px !important;
+}
+.top183px {
+    top: 183px !important;
+}
+.top214px {
+    top: 214px !important;
+}
+.rotate90 {
+    transform: rotateZ(90deg);
+}
+
+/* ---------------------------------------- */
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 18px;
+    }
+    .s768plus {
+        display: none !important;
+    }
+    .headerLogo {
+        top: 20px;
+    }
+}
+@media only screen and (min-width: 600px) {
+    html {
+        font-size: 22px;
+    }
+    .s768plus {
+        display: none !important;
+    }
+    .headerLogo {
+        top: 15px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 26px;
+    }
+    .mnTabs {
+        display: none !important;
+    }
+    header {
+        padding: 20px 50px;
+    }
+    .centeredFlex {
+        display: flex !important;
+    }
+    .headerLogo {
+        top: 8px;
+    }
+    .ptsMainImage {
+        right: 50%;
+        transform: translateX(50%);
+        width: 40%;
+        height: 90%;
+    }
+    .psInfoContainer {
+        width: 40%;
+        top: 15%;
+        padding-top: 120px;
+        padding-left: 50px;
+    }
+    .productSwitchContainer {
+        top: 25%;
+        left: auto;
+        right: 50px;
+    }
+    .productSwitchBtn {
+        height: 35px;
+        width: 35px;
+        border-radius: 35px;
+    }
+    .productContentSwitchContainer {
+        left: auto;
+        right: 50px;
+        bottom: 10%;
+        width: 30%;
+    }
+    .buySectionContainer {
+        left: auto;
+        right: 50px;
+        width: 300px;
+        top: 45%;
+    }
+}
+@media only screen and (min-width: 900px) {
+    html {
+        font-size: 28px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    html {
+        font-size: 30px;
+    }
+}
+/* ---------------------------------------- */

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aqua Co. - Nutritional Flavoured Water</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <link rel="stylesheet" href="/src/css/index.css">
+        <link rel="stylesheet" href="/src/css/animations.css">
+        <script src="/src/js/main.js" defer></script>
+    </head>
+    <body>
+        <header class="centeredFlex">
+            <div class="mobileHeaderNav mnTabs">
+                <div class="mhnIconContainer centeredFlex" onclick="toggleClass(document.querySelector('.mnTabs .headerNav'), 'hidden');">
+                    <div class="mhnUpper"></div>
+                    <div class="mhnLower"></div>
+                </div>
+                <nav class="headerNav hidden">
+                    <div class="hnListContainer centeredFlex accentTxt">
+                        <div>Home</div>
+                        <div>Products</div>
+                        <div>Our Team</div>
+                    </div>
+                    
+                </nav>
+            </div>
+            <nav class="headerNav s768plus centeredFlex accentTxt">
+                <div>Home</div>
+                <div>Products</div>
+                <div>Our Team</div>
+            </nav>
+            <div class="headerLogo accentTxt">Aqua Co.</div>
+            <div class="headerUserIcon"></div>
+        </header>
+        <div class="productSection productTopSection activeSection">
+            <div class="psInfoContainer fade">
+                <div class="ptsHeading accentTxt" style="line-height: 2rem"><span class="mainHeading">AQUA WHITE</span><br><span class="subHeading">Flavoured Water</span></div>
+                <div class="ptsDecription accentTxt">
+                    <div class="productPrice subHeading weight900">$19.00</div><br>
+                    <div class="ptsdContent lightPara">Fresh, innovative taste to keep you going in the summer</div>
+                </div>
+            </div>
+            <div class="productSwitchContainer centeredFlex fade">
+                <div class="productSwitchBtn product1 active" style="background-color: var(--product1color);"></div>
+                <div class="productSwitchBtn product2" style="background-color: var(--product2color);"></div>
+                <div class="productSwitchBtn product3" style="background-color: var(--product3color);"></div>
+                <div class="productSwitchBtn product4" style="background-color: var(--product4color);"></div>
+                <div class="productSwitchBtn product5" style="background-color: var(--product5color);"></div>
+            </div>
+            <div class="ptsMainImage fade"></div>
+        </div>
+        <div class="buySectionContainer moveUp">
+            <button class="primaryBtn lightTxt" id="buyBtn">Add to Cart</button>
+            <button class="iconBtn" id="likeBtn"></button>
+        </div>
+        <div class="productContentSwitchContainer centeredFlex lightPara">
+            <div class="pcsd pcsDescriptionContainer moveUp centeredFlex">Description
+                <div class="expandIcon2Container">
+                    <div class="ei2Item ei2Vertical"></div>
+                    <div class="ei2Item ei2Horizontal"></div>
+                </div>
+            </div>
+            <div class="pcsd pcsNutrientsContainer moveUp centeredFlex">Nutrients
+                <div class="expandIcon2Container">
+                    <div class="ei2Item ei2Vertical"></div>
+                    <div class="ei2Item ei2Horizontal"></div>
+                </div>
+            </div>
+            <div class="pcsd pcsIngredientsContainer moveUp centeredFlex">Ingredients
+                <div class="expandIcon2Container">
+                    <div class="ei2Item ei2Vertical"></div>
+                    <div class="ei2Item ei2Horizontal"></div>
+                </div>
+            </div>
+            <div class="pcsd pcsReviewsContainer noUnderline moveUp centeredFlex">Reviews
+                <div class="expandIcon2Container">
+                    <div class="ei2Item ei2Vertical"></div>
+                    <div class="ei2Item ei2Horizontal"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

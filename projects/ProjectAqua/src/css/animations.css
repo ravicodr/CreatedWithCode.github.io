@@ -1,0 +1,22 @@
+@keyframes fadeLeft {
+    from {
+        transform: intranslateX(none);
+        opacity: 1;
+    }
+    to {
+        left: 0px;
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+}
+@keyframes fadeRight {
+    from {
+        transform: translateX(none);
+        opacity: 1;
+    }
+    to {
+        left: 0px;
+        opacity: 0;
+        transform: translateX(30px);
+    }
+}
