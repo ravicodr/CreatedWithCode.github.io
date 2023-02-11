@@ -414,8 +414,10 @@ h2 {
     width: 80%;
     border-top: 1px solid #966821;
 }
+hr {
+    max-width: 800px !important;
+}
 .content-section {
-    margin-top: 80px;
     width: 100%;
     color: #966821;
 }
@@ -432,7 +434,13 @@ h2 {
     font-size: 1.1rem;
 }
 .about-section {
+    display: flex;
+    justify-content: center;
     min-height: 340px;
+    margin-top: 40px;
+}
+.about-section .container-full {
+    max-width: 1130px;
 }
 .explore-section {
     
@@ -458,6 +466,9 @@ h2 {
 }
 .gallery-item:nth-child(odd) {
     background-color: cyan;
+}
+.end-section {
+    margin-top: 40px;
 }
 .slider-container {
     width: 90%;
