@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
 @font-face {
     font-family: 'Optane';
-    src: url('./fonts/optan.ttf');
+    src: url('/fonts/optan.ttf');
 }
 @font-face {
     font-family: 'Sherlyn';
-    src: url('./fonts/Sherlyn.otf');
+    src: url('/fonts/Sherlyn.otf');
 }
 * {
     margin: 0;
@@ -527,7 +527,7 @@ hr {
     background-color: white;
     font-family: 'Sherlyn';
 }
-.slider-item a {
+.slider-item img {
     width: 70%;
     height: 70%;
     background-color: #966821;

@@ -15,11 +15,11 @@ cinematography -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
-    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./styles/style.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <script src="./main.js" defer></script>
+    <script src="./js/main.js" defer></script>
     <title>CineLove Dev</title>
 </head>
 <body>
@@ -72,7 +72,7 @@ cinematography -->
                 </div>
                 <div class="container container-col half">
                     <a href="#" class="logo-link clickable">
-                        <img src="./header_logo.png" alt="logo" class="clickable">
+                        <img src="./media/header_logo.png" alt="logo" class="clickable">
                     </a>
                 </div>
             </div>
@@ -186,7 +186,7 @@ cinematography -->
             </div>
         </section>
         <section class="content-section explore-section">
-            <div class="img-lightbox container col-align hidden" style="display: none;" tabindex="0">
+            <!-- <div class="img-lightbox container col-align hidden" style="display: none;" tabindex="0">
                 <div class="lightbox-tools container-full">
                     <div class="left">
                         <span class="content">1/3</span>
@@ -233,37 +233,37 @@ cinematography -->
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="container-full">
                 <h2>Let's Dive In</h2>
                 <p>There are always two people in every picture: The Photographer and the Viewer</p>
                 <div class="gallery-view">
-                    <div class="gallery-item clickable" id="gallery-item-1" data-control-id="1">
-                        <img src="./light1.jpg" alt="1">
+                    <div class="gallery-item clickable" id="gallery-item-1" data-control-id="1" data-fancybox="gallery" data-src="./media/light1.jpg" data-caption="1/9">
+                        <img src="./media/light1.jpg" alt="1">
                     </div>
-                    <div class="gallery-item clickable" id="gallery-item-2" data-control-id="2">
-                        <img src="./light2.jpg" alt="1">
+                    <div class="gallery-item clickable" id="gallery-item-2" data-control-id="2" data-fancybox="gallery" data-src="./media/light2.jpg" data-caption="2/9">
+                        <img src="./media/light2.jpg" alt="1">
                     </div>
-                    <div class="gallery-item clickable" id="gallery-item-3" data-control-id="3">
-                        <img src="./light3.jpg" alt="1">
+                    <div class="gallery-item clickable" id="gallery-item-3" data-control-id="3" data-fancybox="gallery" data-src="./media/light3.jpg" data-caption="3/9">
+                        <img src="./media/light3.jpg" alt="1">
                     </div>
-                    <div class="gallery-item clickable" id="gallery-item-4" data-control-id="4">
-                        <img src="./light4.jpg" alt="1">
+                    <div class="gallery-item clickable" id="gallery-item-4" data-control-id="4" data-fancybox="gallery" data-src="./media/light4.jpg" data-caption="4/9">
+                        <img src="./media/light4.jpg" alt="1">
                     </div>
-                    <div class="gallery-item clickable" id="gallery-item-5" data-control-id="5">
-                        <img src="./light5.jpg" alt="1">
+                    <div class="gallery-item clickable" id="gallery-item-5" data-control-id="5" data-fancybox="gallery" data-src="./media/light5.jpg" data-caption="5/9">
+                        <img src="./media/light5.jpg" alt="1">
                     </div>
-                    <div class="gallery-item clickable" id="gallery-item-6" data-control-id="6">
-                        <img src="./light6.png" alt="1">
+                    <div class="gallery-item clickable" id="gallery-item-6" data-control-id="6" data-fancybox="gallery" data-src="./media/light6.png" data-caption="6/9">
+                        <img src="./media/light6.png" alt="1">
                     </div>
-                    <div class="gallery-item  clickable" id="gallery-item-7" data-control-id="7">
-                        <img src="./light7.jpg" alt="1">
+                    <div class="gallery-item  clickable" id="gallery-item-7" data-control-id="7" data-fancybox="gallery" data-src="./media/light7.jpg" data-caption="7/9">
+                        <img src="./media/light7.jpg" alt="1">
                     </div>
-                    <div class="gallery-item  clickable" id="gallery-item-8" data-control-id="8">
-                        <img src="./light8.jpg" alt="1">
+                    <div class="gallery-item  clickable" id="gallery-item-8" data-control-id="8" data-fancybox="gallery" data-src="./media/light8.jpg" data-caption="8/9">
+                        <img src="./media/light8.jpg" alt="1">
                     </div>
-                    <div class="gallery-item  clickable" id="gallery-item-9" data-control-id="9">
-                        <img src="./light9.jpg" alt="1">
+                    <div class="gallery-item  clickable" id="gallery-item-9" data-control-id="9" data-fancybox="gallery" data-src="./media/light9.jpg" data-caption="9/9">
+                        <img src="./media/light9.jpg" alt="1">
                     </div>
                 </div>
                 <div class="btn-container">
@@ -280,26 +280,18 @@ cinematography -->
                 <div class="slider-container container-center">
                     <div class="slider-btn-container prev-btn clickable"><span class="fas fa-arrow-left"></span></div>
                     <div class="slider" active-id="1">
-                        <div class="slider-item" data-id="1">
-                            <a href="#">
-                                <img src="" alt="">
-                            </a>
-                        </div>
-                        <div class="slider-item" data-id="2">
-                            <a href="#">
-                                <img src="" alt="">
-                            </a>
-                        </div>
-                        <div class="slider-item" data-id="3">
-                            <a href="#">
-                                <img src="" alt="">
-                            </a>
-                        </div>
-                        <div class="slider-item" data-id="4">
-                            <a href="#">
-                                <img src="" alt="">
-                            </a>
-                        </div>
+                        <a class="slider-item" data-id="1" href="https://youtu.be/DF3XjEhJ40Y" data-fancybox="video">
+                            <img src="./media/video1.jpg" alt="">
+                        </a>
+                        <a class="slider-item" data-id="2" href="https://youtu.be/DF3XjEhJ40Y" data-fancybox="video">
+                            <img src="./media/video2.jpg" alt="">
+                        </a>
+                        <a class="slider-item" data-id="3" href="https://youtu.be/DF3XjEhJ40Y" data-fancybox="video">
+                            <img src="./media/video3.jpg" alt="">
+                        </a>
+                        <a class="slider-item" data-id="4" href="https://youtu.be/DF3XjEhJ40Y" data-fancybox="video">
+                            <img src="./media/video4.jpg" alt="">
+                        </a>
                     </div>
                     <div class="slider-btn-container next-btn clickable"><span class="fas fa-arrow-right"></span></div>
                 </div>

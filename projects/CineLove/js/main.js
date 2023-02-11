@@ -13,6 +13,7 @@ $(document).ready(function() {
                 $('.menu-btn').removeClass('darkened');
         }
     });
+    
     /**
 		Works Carousel
 	**/
@@ -142,16 +143,16 @@ $(document).ready(function() {
         }
     })
 
-    $('.gallery-item').click(function() {
-        $('.img-lightbox').show().focus();
-        $('.img-lightbox').removeClass('hidden');
-        $('.img-lightbox .img-container').attr('active-id', $(this).attr('data-control-id'));
-        scrollLightbox($(this).attr('data-control-id'));
-        var totalImages = $('.img-lightbox .img-container').children().length;
-        var currImage = parseInt($('.img-lightbox .img-container').attr('active-id'));
-        $('.img-lightbox .lightbox-tools .content').html(currImage+'/'+totalImages);
+    // $('.gallery-item').click(function() {
+    //     $('.img-lightbox').show().focus();
+    //     $('.img-lightbox').removeClass('hidden');
+    //     $('.img-lightbox .img-container').attr('active-id', $(this).attr('data-control-id'));
+    //     scrollLightbox($(this).attr('data-control-id'));
+    //     var totalImages = $('.img-lightbox .img-container').children().length;
+    //     var currImage = parseInt($('.img-lightbox .img-container').attr('active-id'));
+    //     $('.img-lightbox .lightbox-tools .content').html(currImage+'/'+totalImages);
 
-    })
+    // })
 
     //Last Slider Code
     $('.end-section .slider-btn-container.next-btn').click(function() {
@@ -251,3 +252,28 @@ function menuToggle() {
 
 
 // Swiper
+// Fancybox Config
+$('[data-fancybox="gallery"]').fancybox({
+    buttons: [
+    "slideShow",
+    "thumbs",
+    "zoom",
+    "fullScreen",
+    "share",
+    "close"
+    ],
+    loop: false,
+    protect: true
+});
+$('[data-fancybox="video"]').fancybox({
+    afterShow: function() {
+      // After the show-slide-animation has ended - play the vide in the current slide
+    //  var vid = document.getElementById("myVideo"); 
+    //  vid.play(); 
+
+      // Attach the ended callback to trigger the fancybox.next() once the video has ended.
+      this.content.find('video').on('ended', function() {
+        $.fancybox.next();
+      });
+    }
+  });
