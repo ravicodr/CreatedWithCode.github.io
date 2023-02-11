@@ -82,6 +82,12 @@ header {
     text-align: left;
     vertical-align: middle;
 }
+.logo-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 
 .menu-btn {
     position: absolute;
@@ -115,7 +121,7 @@ header {
 
 }
 .menu-btn span.crossed::before {
-    transform: rotateZ(45deg);
+    transform: rotateZ(45deg) translateX(-2px);
     transform-origin: top;
 }
 .menu-btn span::after {
@@ -130,7 +136,7 @@ header {
 
 }
 .menu-btn span.crossed::after {
-    transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg) translateX(2px);
     transform-origin: left;
 }
 .header-menu {
@@ -562,6 +568,7 @@ hr {
     .lightbox-nav {
         background-color: initial;
         filter: brightness(70%);
+        z-index: 800;
     }
     .lightbox-nav:hover {
         filter: brightness(100%);
@@ -673,7 +680,7 @@ hr {
     }
     .slider-item {
         height: 15vw;
-        max-height: 250px;
+        max-height: 200px;
         min-width: 31%;
     }
     
