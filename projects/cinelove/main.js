@@ -246,7 +246,7 @@ function menuToggle() {
     setTimeout(function() {
         $('.socials-container').toggleClass("active");
         $('.links-container').toggleClass("active");
-    }, 1000);
+    }, 700);
 }
 
 
