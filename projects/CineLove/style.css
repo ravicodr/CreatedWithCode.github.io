@@ -643,7 +643,11 @@ h2 {
         height: 100%;
     }
     .gallery-view {
-        
+        width: 95vw;
+    }
+    .gallery-item {
+        max-width: 30vw;
+        max-height: 30vw;
     }
     .img-container {
         top: 0;
@@ -653,8 +657,13 @@ h2 {
     .img-item {
         height: 100%;
     }
+    .slider-container {
+        width: 100%;
+    }
     .slider-item {
-        min-width: 320px;
+        height: 15vw;
+        max-height: 250px;
+        min-width: 31%;
     }
     
 }
@@ -697,6 +706,13 @@ h2 {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
+}
+.swiper-slide .subname,.name {
+    font-family: 'Sherlyn' , 'cursive' !important;
+    font-weight: lighter;
+}
+.swiper-slide:not(.swiper-slide-active) .desc {
+    opacity: 0;
 }
 
 .swiper-button-prev.swiper-button-disabled,
@@ -1325,6 +1341,163 @@ body {
 }
 .swiper-wrapper::-webkit-scrollbar {
     display: none;
+}
+
+/* Animations */
+.splitting-text-anim-1 .char,
+.splitting-text-anim-1 .word,
+.splitting-text-anim-1 .line,
+.splitting-text-anim-2 .char,
+.splitting-text-anim-2 .word,
+.splitting-text-anim-2 .line,
+.splitting-text-anim-3 .char,
+.splitting-text-anim-3 .word,
+.splitting-text-anim-3 .line,
+.splitting-text-anim-4 .char,
+.splitting-text-anim-4 .word,
+.splitting-text-anim-4 .line {
+	-webkit-transition: opacity 0.3s linear, color 0.3s linear, -webkit-transform 0.3s cubic-bezier(0.3, 0, 0.3, 1);
+	transition: opacity 0.3s linear, color 0.3s linear, -webkit-transform 0.3s cubic-bezier(0.3, 0, 0.3, 1);
+	-o-transition: transform 0.3s cubic-bezier(0.3, 0, 0.3, 1), opacity 0.3s linear, color 0.3s linear;
+	transition: transform 0.3s cubic-bezier(0.3, 0, 0.3, 1), opacity 0.3s linear, color 0.3s linear;
+	transition: transform 0.3s cubic-bezier(0.3, 0, 0.3, 1), opacity 0.3s linear, color 0.3s linear, -webkit-transform 0.3s cubic-bezier(0.3, 0, 0.3, 1);
+	-webkit-transform: translate(5px, 0) scale(0.95);
+	-ms-transform: translate(5px, 0) scale(0.95);
+	transform: translate(5px, 0) scale(0.95);
+	opacity: 0;
+}
+
+.splitting-text-anim-1.animate__active .char,
+.splitting-text-anim-1.animate__active .word,
+.splitting-text-anim-1.animate__active .line,
+.splitting-text-anim-2.animate__active .char,
+.splitting-text-anim-2.animate__active .word,
+.splitting-text-anim-2.animate__active .line,
+.splitting-text-anim-3.animate__active .char,
+.splitting-text-anim-3.animate__active .word,
+.splitting-text-anim-3.animate__active .line,
+.splitting-text-anim-4.animate__active .char,
+.splitting-text-anim-4.animate__active .word,
+.splitting-text-anim-4.animate__active .line {
+	-webkit-transform: translate(0, 0) scale(1);
+	-ms-transform: translate(0, 0) scale(1);
+	transform: translate(0, 0) scale(1);
+	opacity: 1;
+}
+
+.splitting-text-anim-1 .char {
+	-webkit-transition-delay: calc(30ms * var(--char-index));
+	-o-transition-delay: calc(30ms * var(--char-index));
+	transition-delay: calc(30ms * var(--char-index));
+}
+
+.splitting-text-anim-1 .word {
+	-webkit-transition-delay: calc(30ms * var(--word-index));
+	-o-transition-delay: calc(30ms * var(--word-index));
+	transition-delay: calc(30ms * var(--word-index));
+}
+
+.splitting-text-anim-1 .line {
+	-webkit-transition-delay: calc(30ms * var(--line-index));
+	-o-transition-delay: calc(30ms * var(--line-index));
+	transition-delay: calc(30ms * var(--line-index));
+}
+
+.splitting-text-anim-2 .char {
+	-webkit-transition-delay: calc(60ms * var(--char-index));
+	-o-transition-delay: calc(60ms * var(--char-index));
+	transition-delay: calc(60ms * var(--char-index));
+}
+
+.splitting-text-anim-2 .word {
+	-webkit-transition-delay: calc(60ms * var(--word-index));
+	-o-transition-delay: calc(60ms * var(--word-index));
+	transition-delay: calc(60ms * var(--word-index));
+}
+
+.splitting-text-anim-2 .line {
+	-webkit-transition-delay: calc(60ms * var(--line-index));
+	-o-transition-delay: calc(60ms * var(--line-index));
+	transition-delay: calc(60ms * var(--line-index));
+}
+
+.splitting-text-anim-3 .char {
+	-webkit-transition-delay: calc(6ms * var(--char-index));
+	-o-transition-delay: calc(6ms * var(--char-index));
+	transition-delay: calc(6ms * var(--char-index));
+}
+
+.splitting-text-anim-3 .word {
+	-webkit-transition-delay: calc(6ms * var(--word-index));
+	-o-transition-delay: calc(6ms * var(--word-index));
+	transition-delay: calc(6ms * var(--word-index));
+}
+
+.splitting-text-anim-3 .line {
+	-webkit-transition-delay: calc(6ms * var(--line-index));
+	-o-transition-delay: calc(6ms * var(--line-index));
+	transition-delay: calc(6ms * var(--line-index));
+}
+
+.splitting-text-anim-4 .char {
+	-webkit-transition-delay: calc(20ms * var(--char-index));
+	-o-transition-delay: calc(20ms * var(--char-index));
+	transition-delay: calc(20ms * var(--char-index));
+}
+
+.splitting-text-anim-4 .word {
+	-webkit-transition-delay: calc(20ms * var(--word-index));
+	-o-transition-delay: calc(20ms * var(--word-index));
+	transition-delay: calc(20ms * var(--word-index));
+}
+
+.splitting-text-anim-4 .line {
+	-webkit-transition-delay: calc(20ms * var(--line-index));
+	-o-transition-delay: calc(20ms * var(--line-index));
+	transition-delay: calc(20ms * var(--line-index));
+}
+
+.scrolla-element-anim-1 {
+	-webkit-transition: opacity 0.4s linear, color 0.3s linear, -webkit-transform 0.7s cubic-bezier(0.3, 0, 0.3, 1);
+	transition: opacity 0.4s linear, color 0.3s linear, -webkit-transform 0.7s cubic-bezier(0.3, 0, 0.3, 1);
+	-o-transition: transform 0.7s cubic-bezier(0.3, 0, 0.3, 1), opacity 0.4s linear, color 0.3s linear;
+	transition: transform 0.7s cubic-bezier(0.3, 0, 0.3, 1), opacity 0.4s linear, color 0.3s linear;
+	transition: transform 0.7s cubic-bezier(0.3, 0, 0.3, 1), opacity 0.4s linear, color 0.3s linear, -webkit-transform 0.7s cubic-bezier(0.3, 0, 0.3, 1);
+	-webkit-transform: translate(0, 20px);
+	-ms-transform: translate(0, 20px);
+	transform: translate(0, 20px);
+	opacity: 0;
+	-webkit-transition-delay: 200ms;
+	-o-transition-delay: 200ms;
+	transition-delay: 200ms;
+}
+
+.scrolla-element-anim-1.animate__active, .animate-active .scrolla-element-anim-1 {
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	transform: translate(0, 0);
+	opacity: 1;
+}
+
+.animate-active .splitting-text-anim-1 .char,
+.animate-active .splitting-text-anim-1 .word,
+.animate-active .splitting-text-anim-1 .line,
+.animate-active .splitting-text-anim-2 .char,
+.animate-active .splitting-text-anim-2 .word,
+.animate-active .splitting-text-anim-2 .line,
+.animate-active .splitting-text-anim-3 .char,
+.animate-active .splitting-text-anim-3 .word,
+.animate-active .splitting-text-anim-3 .line,
+.animate-active .splitting-text-anim-4 .char,
+.animate-active .splitting-text-anim-4 .word,
+.animate-active .splitting-text-anim-4 .line,
+.animate-active .scrolla-element-anim-1 .char,
+.animate-active .scrolla-element-anim-1 .word,
+.animate-active .scrolla-element-anim-1 .line {
+	-webkit-transform: translate(0, 0) scale(1);
+	-ms-transform: translate(0, 0) scale(1);
+	transform: translate(0, 0) scale(1);
+	opacity: 1;
 }
 
 
