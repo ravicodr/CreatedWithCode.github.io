@@ -1,0 +1,326 @@
+<!-- top Slider
+we are cinelove
+menu
+let's dive in
+cinematography -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- New -->
+    
+    <!-- New -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./main.js" defer></script>
+    <title>CineLove Dev</title>
+</head>
+<body>
+    <div class="root-container">
+        <div class="img-lightbox container col-align hidden" style="display: none;" tabindex="0">
+            <div class="lightbox-tools container-full">
+                <div class="left">
+                    <span class="content">1/3</span>
+                </div>
+                <div class="right">
+                    <ul class="tools container-center">
+                        <li class="tools-item zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></li>
+                        <li class="tools-item full-screen"><i class="fa-solid fa-expand"></i></li>
+                        <li class="tools-item share"><i class="fa-solid fa-share"></i></li>
+                        <li class="tools-item close no-hide"><i class="fa-solid fa-xmark"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="lightbox-nav prev-nav"><span class="fas fa-arrow-left"></span></div>
+                <div class="lightbox-nav next-nav"><span class="fas fa-arrow-right"></span></div>
+                <div class="img-container" active-id="1">
+                    <div class="img-item" id="lb-img-1" data-id="1">
+                        <img src="./light1.jpg" alt="1">
+                    </div>
+                    <div class="img-item" id="lb-img-2" data-id="2">
+                        <img src="./light2.jpg" alt="2">
+                    </div>
+                    <div class="img-item" id="lb-img-3" data-id="3">
+                        <img src="./light3.jpg" alt="3">
+                    </div>
+                    <div class="img-item" id="lb-img-4" data-id="3">
+                        <img src="./light4.jpg" alt="4">
+                    </div>
+                    <div class="img-item" id="lb-img-5" data-id="3">
+                        <img src="./light5.jpg" alt="5">
+                    </div>
+                    <div class="img-item" id="lb-img-5" data-id="3">
+                        <img src="./light6.png" alt="6">
+                    </div>
+                    <div class="img-item" id="lb-img-6" data-id="3">
+                        <img src="./light7.jpg" alt="7">
+                    </div>
+                    <div class="img-item" id="lb-img-7" data-id="3">
+                        <img src="./light8.jpg" alt="8">
+                    </div>
+                    <div class="img-item" id="lb-img-8" data-id="3">
+                        <img src="./light9.jpg" alt="9">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span id="circle" class="circle-cursor"></span>
+        <header class="header">
+            <div class="header-menu container-center hidden">
+                <div class="links-container container-center">
+                    <nav class="container-center">
+                        <ul class="container-center col-align">
+                            <li class="clickable">We're CineLove</li>
+                            <li class="container-center col-align has-subitems clickable"><div>Work<span class="fas fa-angle-down menu-item-expand" style="margin-left: 10px;"></span></span></div>
+                                <ul class="subitems hidden" style="text-align: center;">
+                                    <li class="clickable">Photography</li>
+                                    <li class="clickable">Films</li>
+                                </ul>
+                            </li>
+                            <li class="container-center col-align has-subitems clickable"><div>Storytellers<span class="fas fa-angle-down menu-item-expand" style="margin-left: 10px;"></span></div>
+                                <ul class="subitems hidden" style="text-align: center;">
+                                    <li class="clickable">Storytelling Squad</li>
+                                    <li class="clickable">Awards</li>
+                                </ul>
+                            </li>
+                            <li class="clickable">Magical Wedding Tales</li>
+                            <li class="clickable">Connect</li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- <div class="menu-full">
+                    <ul id="menu-main-menu" class="menu-full"><li id="menu-item-2650" class="menu-item menu-item-type-custom menu-item-object-custom"><a class="splitting-text-anim-2 words chars splitting" data-splitting="chars" href="/about-us" style="--word-total:2; --char-total:13;"><span class="word" data-word="We’re" style="--word-index:0;"><span class="char" data-char="W" style="--char-index:0;">W</span><span class="char" data-char="e" style="--char-index:1;">e</span><span class="char" data-char="’" style="--char-index:2;">’</span><span class="char" data-char="r" style="--char-index:3;">r</span><span class="char" data-char="e" style="--char-index:4;">e</span></span><span class="whitespace"> </span><span class="word" data-word="CineLove" style="--word-index:1;"><span class="char" data-char="C" style="--char-index:5;">C</span><span class="char" data-char="i" style="--char-index:6;">i</span><span class="char" data-char="n" style="--char-index:7;">n</span><span class="char" data-char="e" style="--char-index:8;">e</span><span class="char" data-char="L" style="--char-index:9;">L</span><span class="char" data-char="o" style="--char-index:10;">o</span><span class="char" data-char="v" style="--char-index:11;">v</span><span class="char" data-char="e" style="--char-index:12;">e</span></span></a></li>
+                    <li id="menu-item-1657" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children has-children"><a class="splitting-text-anim-2 words chars splitting" data-splitting="chars" href="#" style="--word-total:1; --char-total:4;"><span class="word" data-word="Work" style="--word-index:0;"><span class="char" data-char="W" style="--char-index:0;">W</span><span class="char" data-char="o" style="--char-index:1;">o</span><span class="char" data-char="r" style="--char-index:2;">r</span><span class="char" data-char="k" style="--char-index:3;">k</span></span></a>
+                    <ul class="sub-menu " style="max-height: 0px;">
+                    <li id="menu-item-2651" class=" menu-item menu-item-type-custom menu-item-object-custom "><a class="splitting-text-anim-1 words chars splitting" data-splitting="chars" href="/gallery" style="--word-total:1; --char-total:11;"><span class="word" data-word="Photography" style="--word-index:0;"><span class="char" data-char="P" style="--char-index:0;">P</span><span class="char" data-char="h" style="--char-index:1;">h</span><span class="char" data-char="o" style="--char-index:2;">o</span><span class="char" data-char="t" style="--char-index:3;">t</span><span class="char" data-char="o" style="--char-index:4;">o</span><span class="char" data-char="g" style="--char-index:5;">g</span><span class="char" data-char="r" style="--char-index:6;">r</span><span class="char" data-char="a" style="--char-index:7;">a</span><span class="char" data-char="p" style="--char-index:8;">p</span><span class="char" data-char="h" style="--char-index:9;">h</span><span class="char" data-char="y" style="--char-index:10;">y</span></span></a></li>
+                    <li id="menu-item-2753" class=" menu-item menu-item-type-custom menu-item-object-custom "><a class="splitting-text-anim-1 words chars splitting" data-splitting="chars" href="/films" style="--word-total:1; --char-total:5;"><span class="word" data-word="Films" style="--word-index:0;"><span class="char" data-char="F" style="--char-index:0;">F</span><span class="char" data-char="i" style="--char-index:1;">i</span><span class="char" data-char="l" style="--char-index:2;">l</span><span class="char" data-char="m" style="--char-index:3;">m</span><span class="char" data-char="s" style="--char-index:4;">s</span></span></a></li>
+                    </ul>
+                    </li>
+                    <li id="menu-item-1664" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children has-children closed"><a class="splitting-text-anim-2 words chars splitting" data-splitting="chars" href="#" style="--word-total:1; --char-total:12;"><span class="word" data-word="Storytellers" style="--word-index:0;"><span class="char" data-char="S" style="--char-index:0;">S</span><span class="char" data-char="t" style="--char-index:1;">t</span><span class="char" data-char="o" style="--char-index:2;">o</span><span class="char" data-char="r" style="--char-index:3;">r</span><span class="char" data-char="y" style="--char-index:4;">y</span><span class="char" data-char="t" style="--char-index:5;">t</span><span class="char" data-char="e" style="--char-index:6;">e</span><span class="char" data-char="l" style="--char-index:7;">l</span><span class="char" data-char="l" style="--char-index:8;">l</span><span class="char" data-char="e" style="--char-index:9;">e</span><span class="char" data-char="r" style="--char-index:10;">r</span><span class="char" data-char="s" style="--char-index:11;">s</span></span></a>
+                    <ul class="sub-menu " style="max-height: 0px;">
+                    <li id="menu-item-2652" class=" menu-item menu-item-type-custom menu-item-object-custom "><a class="splitting-text-anim-1 words chars splitting" data-splitting="chars" href="/our-team" style="--word-total:2; --char-total:17;"><span class="word" data-word="Storytelling" style="--word-index:0;"><span class="char" data-char="S" style="--char-index:0;">S</span><span class="char" data-char="t" style="--char-index:1;">t</span><span class="char" data-char="o" style="--char-index:2;">o</span><span class="char" data-char="r" style="--char-index:3;">r</span><span class="char" data-char="y" style="--char-index:4;">y</span><span class="char" data-char="t" style="--char-index:5;">t</span><span class="char" data-char="e" style="--char-index:6;">e</span><span class="char" data-char="l" style="--char-index:7;">l</span><span class="char" data-char="l" style="--char-index:8;">l</span><span class="char" data-char="i" style="--char-index:9;">i</span><span class="char" data-char="n" style="--char-index:10;">n</span><span class="char" data-char="g" style="--char-index:11;">g</span></span><span class="whitespace"> </span><span class="word" data-word="Squad" style="--word-index:1;"><span class="char" data-char="S" style="--char-index:12;">S</span><span class="char" data-char="q" style="--char-index:13;">q</span><span class="char" data-char="u" style="--char-index:14;">u</span><span class="char" data-char="a" style="--char-index:15;">a</span><span class="char" data-char="d" style="--char-index:16;">d</span></span></a></li>
+                    <li id="menu-item-697" class=" menu-item menu-item-type-post_type menu-item-object-page "><a class="splitting-text-anim-1 words chars splitting" data-splitting="chars" href="https://cinelove.in/awards/" style="--word-total:1; --char-total:6;"><span class="word" data-word="Awards" style="--word-index:0;"><span class="char" data-char="A" style="--char-index:0;">A</span><span class="char" data-char="w" style="--char-index:1;">w</span><span class="char" data-char="a" style="--char-index:2;">a</span><span class="char" data-char="r" style="--char-index:3;">r</span><span class="char" data-char="d" style="--char-index:4;">d</span><span class="char" data-char="s" style="--char-index:5;">s</span></span></a></li>
+                    </ul>
+                    </li>
+                    <li id="menu-item-2662" class="menu-item menu-item-type-custom menu-item-object-custom"><a class="splitting-text-anim-2 words chars splitting" data-splitting="chars" href="#" style="--word-total:3; --char-total:19;"><span class="word" data-word="Magical" style="--word-index:0;"><span class="char" data-char="M" style="--char-index:0;">M</span><span class="char" data-char="a" style="--char-index:1;">a</span><span class="char" data-char="g" style="--char-index:2;">g</span><span class="char" data-char="i" style="--char-index:3;">i</span><span class="char" data-char="c" style="--char-index:4;">c</span><span class="char" data-char="a" style="--char-index:5;">a</span><span class="char" data-char="l" style="--char-index:6;">l</span></span><span class="whitespace"> </span><span class="word" data-word="Wedding" style="--word-index:1;"><span class="char" data-char="W" style="--char-index:7;">W</span><span class="char" data-char="e" style="--char-index:8;">e</span><span class="char" data-char="d" style="--char-index:9;">d</span><span class="char" data-char="d" style="--char-index:10;">d</span><span class="char" data-char="i" style="--char-index:11;">i</span><span class="char" data-char="n" style="--char-index:12;">n</span><span class="char" data-char="g" style="--char-index:13;">g</span></span><span class="whitespace"> </span><span class="word" data-word="Tales" style="--word-index:2;"><span class="char" data-char="T" style="--char-index:14;">T</span><span class="char" data-char="a" style="--char-index:15;">a</span><span class="char" data-char="l" style="--char-index:16;">l</span><span class="char" data-char="e" style="--char-index:17;">e</span><span class="char" data-char="s" style="--char-index:18;">s</span></span></a></li>
+                    <li id="menu-item-2663" class="menu-item menu-item-type-custom menu-item-object-custom"><a class="splitting-text-anim-2 words chars splitting" data-splitting="chars" href="/connect" style="--word-total:1; --char-total:7;"><span class="word" data-word="Connect" style="--word-index:0;"><span class="char" data-char="C" style="--char-index:0;">C</span><span class="char" data-char="o" style="--char-index:1;">o</span><span class="char" data-char="n" style="--char-index:2;">n</span><span class="char" data-char="n" style="--char-index:3;">n</span><span class="char" data-char="e" style="--char-index:4;">e</span><span class="char" data-char="c" style="--char-index:5;">c</span><span class="char" data-char="t" style="--char-index:6;">t</span></span></a></li>
+                    </ul>
+                </div> -->
+                <div class="container-full socials-container">
+                    <div class="element-widget instagram">
+                        <a href="#"><span class="fa-brands fa-instagram clickable"></span></a>
+                    </div>
+                    <div class="element-widget facebook">
+                        <a href="#"><span class="fa-brands fa-facebook clickable"></span></a>
+                    </div>
+                    <div class="element-widget youtube">
+                        <a href="#"><span class="fa-brands fa-youtube clickable"></span></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-bg"></div>
+            <div class="container-full">
+                <div class="container container-col half">
+                    <div class="element-widget clickable">
+                        <a href="#" class="menu-btn">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="container container-col half">
+                    <a href="#" class="logo-link clickable">
+                        <img src="./header_logo.png" alt="logo" class="clickable">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- Section Works Carousel -->
+<div class="section m-works-carousel fully">
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<!-- slide -->
+			<div class="swiper-slide">
+				<!-- works slide -->
+				<div class="works-slide">
+					<a href="#">
+						<span class="image">
+							<span class="img">
+								<span class="slide" style="background-image: url(https://cinelove.in/wp-content/uploads/2021/03/1.jpg);"></span>
+							</span>
+						</span>
+						<span class="desc">
+							<span class="subname splitting-text-anim-1" data-splitting="chars">
+								<span></span>
+							</span>
+							<span class="name splitting-text-anim-1" data-splitting="chars">
+								<span>Reverie</span>
+							</span>
+						</span>
+					</a>
+				</div>
+			</div>
+			<!-- slide -->
+			<div class="swiper-slide">
+				<!-- works slide -->
+				<div class="works-slide">
+					<a href="#">
+						<span class="image">
+							<span class="img">
+								<span class="slide" style="background-image: url(https://cinelove.in/wp-content/uploads/2021/03/1.jpg);"></span>
+							</span>
+						</span>
+						<span class="desc">
+							<span class="subname splitting-text-anim-1" data-splitting="chars">
+								<span></span>
+							</span>
+							<span class="name splitting-text-anim-1" data-splitting="chars">
+								<span>Reverie</span>
+							</span>
+						</span>
+					</a>
+				</div>
+			</div>
+			<!-- slide -->
+			<div class="swiper-slide">
+				<!-- works slide -->
+				<div class="works-slide">
+					<a href="#">
+						<span class="image">
+							<span class="img">
+								<span class="slide" style="background-image: url(https://cinelove.in/wp-content/uploads/2021/03/1.jpg);"></span>
+							</span>
+						</span>
+						<span class="desc">
+							<span class="subname splitting-text-anim-1" data-splitting="chars">
+								<span></span>
+							</span>
+							<span class="name splitting-text-anim-1" data-splitting="chars">
+								<span>Reverie</span>
+							</span>
+						</span>
+					</a>
+				</div>
+			</div>
+			<!-- slide -->
+			<div class="swiper-slide">
+				<!-- works slide -->
+				<div class="works-slide">
+					<a href="#">
+						<span class="image">
+							<span class="img">
+								<span class="slide" style="background-image: url(https://cinelove.in/wp-content/uploads/2021/03/1.jpg);"></span>
+							</span>
+						</span>
+						<span class="desc">
+							<span class="subname splitting-text-anim-1" data-splitting="chars">
+								<span></span>
+							</span>
+							<span class="name splitting-text-anim-1" data-splitting="chars">
+								<span>Reverie</span>
+							</span>
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="swiper-pagination">
+		</div>
+	</div>
+</div>
+        <section class="content-section about-section">
+            <div class="container-full">
+                <h2>We're CineLove</h2>
+                <p>
+                    A team of enthusiastic storytelling Wedding Photographers 
+                    who know nothing more than passionately <br>crafting 
+                    memories of your wedding day that you’d want to cherish 
+                    for a lifetime.
+                </p>
+                <div class="btn-container">
+                    <button class="primary-btn">KNOW MORE</button>
+                </div>
+                <hr>
+            </div>
+        </section>
+        <section class="content-section explore-section">
+            <div class="container-full">
+                <h2>Let's Dive In</h2>
+                <p>There are always two people in every picture: The Photographer and the Viewer</p>
+                <div class="gallery-view">
+                    <div class="gallery-item clickable" id="gallery-item-1" data-control-id="1">
+                        <img src="./light1.jpg" alt="1">
+                    </div>
+                    <div class="gallery-item clickable" id="gallery-item-2" data-control-id="2">
+                        <img src="./light2.jpg" alt="1">
+                    </div>
+                    <div class="gallery-item clickable" id="gallery-item-3" data-control-id="3">
+                        <img src="./light3.jpg" alt="1">
+                    </div>
+                    <div class="gallery-item clickable" id="gallery-item-4" data-control-id="4">
+                        <img src="./light4.jpg" alt="1">
+                    </div>
+                    <div class="gallery-item clickable" id="gallery-item-5" data-control-id="5">
+                        <img src="./light5.jpg" alt="1">
+                    </div>
+                    <div class="gallery-item clickable" id="gallery-item-6" data-control-id="6">
+                        <img src="./light6.png" alt="1">
+                    </div>
+                    <div class="gallery-item  clickable" id="gallery-item-7" data-control-id="7">
+                        <img src="./light7.jpg" alt="1">
+                    </div>
+                    <div class="gallery-item  clickable" id="gallery-item-8" data-control-id="8">
+                        <img src="./light8.jpg" alt="1">
+                    </div>
+                    <div class="gallery-item  clickable" id="gallery-item-9" data-control-id="9">
+                        <img src="./light9.jpg" alt="1">
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <button class="primary-btn">LOAD MORE</button>
+                </div>
+                <hr>
+            </div>
+        </section>
+        <section class="content-section end-section">
+            <div class="container-full">
+                <h2>Cinematography</h2>
+                <p>Capturing emotions in motion!</p>
+                
+                <div class="slider-container container-center">
+                    <div class="slider-btn-container prev-btn clickable"><span class="fas fa-arrow-left"></span></div>
+                    <div class="slider" active-id="1">
+                        <div class="slider-item" data-id="1">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                        <div class="slider-item" data-id="2">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                        <div class="slider-item" data-id="3">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                        <div class="slider-item" data-id="4">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slider-btn-container next-btn clickable"><span class="fas fa-arrow-right"></span></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
