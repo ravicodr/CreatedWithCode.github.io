@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    
+    //Initialize mouse follower
     mouseFollow();
     $('.menu-btn').click(menuToggle);
 
@@ -72,30 +74,7 @@ $(document).ready(function() {
 		}
 	});
 
-    /**
-		Menu Full Overlay Submenu
-	**/
-	$('.menu-full').on('click', '.has-children > a', function(){
-		if($(this).closest('li').hasClass('opened')) {
-			$(this).closest('li').removeClass('opened');
-			$(this).closest('li').addClass('closed');
-			$(this).closest('li').find('> ul').css('max-height', 0);
-		} else {
-			$(this).closest('ul').find('> li').removeClass('closed').removeClass('opened');
-			$(this).closest('ul').find('> li').find('> ul').css('max-height', 0);
-			
-			$(this).closest('li').addClass('opened');
-
-			var submenu_h = 0;
-			$(this).closest('li').find('> ul > li').each(function(){
-				submenu_h += $(this).height() + 20;
-			});
-			$(this).closest('li').find('> ul').css('max-height', submenu_h + 20);
-		}
-		return false;
-	});
-
-    //----Menu Items Expand/Collapse
+    //----Menu Overlay Submenu
     $('li.has-subitems div').click(function() {
         
         $(this).parent().siblings('.has-subitems').children(".subitems").addClass("hidden");
@@ -108,52 +87,6 @@ $(document).ready(function() {
         $(this).parent().children("ul").toggleClass("hidden");
     });
 
-    //----Lightbox
-    $('.img-lightbox').click(function() {
-        if ($('.img-lightbox .img-container:hover, .img-lightbox .lightbox-nav:hover, .lightbox-tools .tools-item:not(.close):hover').length == 0) {
-            $(this).addClass('hidden');
-            $(this).hide();
-            document.exitFullscreen();
-        }
-    })
-
-    $('.lightbox-tools .tools-item.full-screen').click( function() {
-        document.querySelector('.img-lightbox').requestFullscreen();
-    });
-    $('.lightbox-tools .tools-item.zoom').click(function() {
-        var activeImg = $('.img-lightbox .img-container').attr('active-id');
-        $('.img-lightbox .img-container').css('transform', 'scale(4)');
-        //$(`.img-lightbox .img-container .img-item[data-id=${activeImg}]`).css('transform', 'scale(4)');
-    });
-
-    $('.lightbox-nav.next-nav').click(function() {
-        scrollLightboxNext();
-    })
-    $('.lightbox-nav.prev-nav').click(function() {
-        scrollLightboxPrev();
-    })
-
-    $('.img-lightbox').on('keydown', function(event) {
-        //console.log(event.keyCode);
-        if (event.keyCode == 39) {
-            scrollLightboxNext();
-        }
-        if (event.keyCode == 37) {
-            scrollLightboxPrev();
-        }
-    })
-
-    // $('.gallery-item').click(function() {
-    //     $('.img-lightbox').show().focus();
-    //     $('.img-lightbox').removeClass('hidden');
-    //     $('.img-lightbox .img-container').attr('active-id', $(this).attr('data-control-id'));
-    //     scrollLightbox($(this).attr('data-control-id'));
-    //     var totalImages = $('.img-lightbox .img-container').children().length;
-    //     var currImage = parseInt($('.img-lightbox .img-container').attr('active-id'));
-    //     $('.img-lightbox .lightbox-tools .content').html(currImage+'/'+totalImages);
-
-    // })
-
     //Last Slider Code
     $('.end-section .slider-btn-container.next-btn').click(function() {
         scrollSliderNext();
@@ -161,34 +94,29 @@ $(document).ready(function() {
     $('.end-section .slider-btn-container.prev-btn').click(function() {
         scrollSliderPrev();
     })
+
+    // Fancybox Config
+    $('[data-fancybox="gallery"]').fancybox({
+        buttons: [
+        "slideShow",
+        "thumbs",
+        "zoom",
+        "fullScreen",
+        "share",
+        "close"
+        ],
+        loop: false,
+        protect: true
+    });
+    $('[data-fancybox="video"]').fancybox({
+        afterShow: function() {
+        this.content.find('video').on('ended', function() {
+            $.fancybox.next();
+        });
+        }
+    });
   
 });
-
-function scrollLightbox(elemId) {
-    $('.img-lightbox .img-container').scrollLeft($('.img-lightbox .img-container')[0].clientWidth*(elemId-1));
-}
-function scrollLightboxNext() {
-    var activeId = parseInt($(".img-lightbox .img-container").attr('active-id'));
-    var totalImages = $('.img-lightbox .img-container').children().length;
-    var currImage = parseInt($('.img-lightbox .img-container').attr('active-id'));
-
-    if (activeId != $('.img-lightbox .img-container').children().length) {
-        $(".img-lightbox .img-container").attr('active-id', activeId+1);
-        $('.img-lightbox .lightbox-tools .content').html(currImage+1+'/'+totalImages);
-    }
-    $('.img-lightbox .img-container').animate({scrollLeft: $('.img-lightbox .img-container')[0].clientWidth*activeId}, 500);
-}
-function scrollLightboxPrev() {
-    var activeId = parseInt($(".img-lightbox .img-container").attr('active-id'));
-    var totalImages = $('.img-lightbox .img-container').children().length;
-    var currImage = parseInt($('.img-lightbox .img-container').attr('active-id'));
-
-    if (activeId != 1) {
-        $(".img-lightbox .img-container").attr('active-id', activeId-1);
-        $('.img-lightbox .lightbox-tools .content').html(currImage-1+'/'+totalImages);
-    }
-    $('.img-lightbox .img-container').animate({scrollLeft: $('.img-lightbox .img-container')[0].clientWidth*(activeId-2)}, 500);
-}
 
 function scrollSliderNext() {
     var activeId = parseInt($(".end-section .slider").attr('active-id'));
@@ -205,6 +133,7 @@ function scrollSliderPrev() {
     $('.end-section .slider').animate({scrollLeft: $('.end-section .slider')[0].clientWidth*(activeId-2)}, 500);
 }
 
+//Mouse follow Animation
 function mouseFollow() {
     var mouseX = 0, mouseY = 0;
     var xp = 0, yp = 0;
@@ -230,6 +159,7 @@ function mouseFollow() {
     })
 }
 
+//----Show/Hide Header Menu
 function menuToggle() {
     $('.menu-btn span').toggleClass("crossed");
     $('.header-menu').toggleClass("hidden");
@@ -249,31 +179,3 @@ function menuToggle() {
         $('.links-container').toggleClass("active");
     }, 700);
 }
-
-
-// Swiper
-// Fancybox Config
-$('[data-fancybox="gallery"]').fancybox({
-    buttons: [
-    "slideShow",
-    "thumbs",
-    "zoom",
-    "fullScreen",
-    "share",
-    "close"
-    ],
-    loop: false,
-    protect: true
-});
-$('[data-fancybox="video"]').fancybox({
-    afterShow: function() {
-      // After the show-slide-animation has ended - play the vide in the current slide
-    //  var vid = document.getElementById("myVideo"); 
-    //  vid.play(); 
-
-      // Attach the ended callback to trigger the fancybox.next() once the video has ended.
-      this.content.find('video').on('ended', function() {
-        $.fancybox.next();
-      });
-    }
-  });

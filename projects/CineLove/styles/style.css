@@ -1,3 +1,4 @@
+/* ---- Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
 @font-face {
     font-family: 'Optane';
@@ -7,6 +8,8 @@
     font-family: 'Sherlyn';
     src: url('/fonts/Sherlyn.otf');
 }
+
+/* ---- Reset Styles */
 * {
     margin: 0;
     padding: 0;
@@ -19,29 +22,11 @@ html, body {
     font-family: 'Roboto Slab', serif;
     font-size: 14px;
 }
+
+/* ---- Custom Containers ---- */
 .root-container {
     width: 100%;
     background-color: #fff4ec;
-}
-header {
-    position: fixed;
-    height: 120px;
-    width: 100%;
-    padding: 20px 15px;
-    z-index: 20;
-}
-.header-bg {
-    position: absolute;
-    top: -140px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    z-index: 0;
-    transition: 0.5s ease-in;
-}
-.header-bg.active {
-    top: 0px;
 }
 .container {
     display: flex;
@@ -82,6 +67,47 @@ header {
     text-align: left;
     vertical-align: middle;
 }
+
+/* ---- Custom Styles ---- */
+h2 {
+    font-family: 'Sherlyn';
+    font-weight: lighter;
+    font-size: 2rem;
+    color: #b9904e;
+}
+.primary-btn {
+    padding: 16px 24px;
+    background-color: transparent;
+    border: 1px solid #966821;
+    border-radius: 5px;
+    color: #966821;
+    font-family: 'Optane';
+}
+hr {
+    max-width: 800px !important;
+}
+
+/* ---- Header ---- */
+header {
+    position: fixed;
+    height: 120px;
+    width: 100%;
+    padding: 20px 15px;
+    z-index: 20;
+}
+.header-bg {
+    position: absolute;
+    top: -140px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 0;
+    transition: 0.5s ease-in;
+}
+.header-bg.active {
+    top: 0px;
+}
 .logo-link {
     position: absolute;
     top: 50%;
@@ -89,6 +115,7 @@ header {
     transform: translate(-50%,-50%);
 }
 
+/* ---- Header Menu ---- */
 .menu-btn {
     position: absolute;
     margin-left: auto;
@@ -162,31 +189,6 @@ header {
 .menu-active .menu-btn span::after {
     background-color: #fff;
 }
-/* .header-menu::before {
-    content: '';
-    position: absolute;
-    bottom: 50vh;
-    height: 80vh;
-    width: 500vw;
-    background-color: #101017;
-    opacity: 1;
-    transition: 1s ease-in;
-    z-index: -1;
-    pointer-events: none;
-    transform: rotateZ(-30deg);
-}
-.menu-active .header-menu::before {
-    content: '';
-    position: absolute;
-    bottom: -50vh;
-    height: 100vh;
-    width: 500vw;
-    transform: rotateZ(0deg);
-    background-color: #101017;
-    opacity: 1;
-
-} */
-
 
 .links-container {
     position: relative;
@@ -281,20 +283,7 @@ li {
     color: rgb(202, 254, 255);
 }
 
-h2 {
-    font-family: 'Sherlyn';
-    font-weight: lighter;
-    font-size: 2rem;
-    color: #b9904e;
-}
-.primary-btn {
-    padding: 16px 24px;
-    background-color: transparent;
-    border: 1px solid #966821;
-    border-radius: 5px;
-    color: #966821;
-    font-family: 'Optane';
-}
+
 .hero {
     width: 100vw;
     height: 100vh;
@@ -370,58 +359,11 @@ h2 {
     height: 100vw;
     background-color: #966821;
 }
-.lightbox-nav {
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    background-color: rgba(0, 0, 0, 0.7);
-    font-size: 1.5rem;
-}
-.lightbox-nav.next-nav {
-    right: 0%;
-}
-.lightbox-nav span {
-    width: 100%;
-    text-align: center;
-    line-height: 48px;
-}
-.lightbox-tools {
-    height: 40px;
-    padding: 15px 30px 0 30px;
-    color: white;
-    justify-content: space-between;
-    align-items: flex-end;
-    font-size: 1rem;
-}
-.lightbox-tools .tools {
-    justify-content: flex-end;
-    gap: 30px;
-}
-.tools-item {
-    list-style: none;
-    cursor: pointer;
-}
-.img-lightbox .content {
-    height: 75%;
-}
-.lightbox-tools .left {
-    width: 80px;
-    height: ;
-}
-.lightbox-tools .right {
-    width: 100%;
-    height: 100%;
-}
 
+/* ---- About Us ----  */
 .content-section hr {
     width: 80%;
     border-top: 1px solid #966821;
-}
-hr {
-    max-width: 800px !important;
 }
 .content-section {
     width: 100%;
@@ -473,6 +415,8 @@ hr {
 .gallery-item:nth-child(odd) {
     background-color: cyan;
 }
+
+/* ---- Video Gallery Slider ---- */
 .end-section {
     margin-top: 40px;
 }
