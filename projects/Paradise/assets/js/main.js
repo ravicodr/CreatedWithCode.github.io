@@ -1,27 +1,44 @@
-var carousel = function() {
-    $('.home-slider').owlCarousel({
-    loop:true,
-    autoplay: true,
-    margin:0,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-    nav:true,
-    dots: true,
-    autoplayHoverPause: false,
-    items: 1,
-    navText : ["<span class='ion-ios-arrow-back'></span>","<span class='ion-ios-arrow-forward'></span>"],
-    responsive:{
-      0:{
-        items:1
-      },
-      600:{
-        items:1
-      },
-      1000:{
-        items:1
-      }
-    }
+$(document).ready(function(){
+    // invoke the carousel
+        $('#myCarousel').carousel({
+            autoplay: true
+        });
+    
+    // scroll slides on mouse scroll 
+    $('#myCarousel').bind('mousewheel DOMMouseScroll', function(e){
+    
+            if(e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+                $(this).carousel('prev');
+                
+            }
+            else{
+                $(this).carousel('next');
+                
+            }
+        });
+    
+    //scroll slides on swipe for touch enabled devices 
+    
+         $("#myCarousel").on("touchstart", function(event){
+     
+            var yClick = event.originalEvent.touches[0].pageY;
+            $(this).one("touchmove", function(event){
+    
+            var yMove = event.originalEvent.touches[0].pageY;
+            if( Math.floor(yClick - yMove) > 1 ){
+                $(".carousel").carousel('next');
+            }
+            else if( Math.floor(yClick - yMove) < -1 ){
+                $(".carousel").carousel('prev');
+            }
+        });
+        $(".carousel").on("touchend", function(){
+                $(this).off("touchmove");
+        });
     });
-
-};
-carousel();
+     
+    $('.navbar-toggler').on("click", function(event){
+        $('div.navbar-collapse').toggle();
+    });
+    });
+    
