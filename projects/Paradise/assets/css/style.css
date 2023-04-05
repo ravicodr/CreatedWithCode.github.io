@@ -415,6 +415,9 @@ footer {
         width: 150px !important;
         background: #fff;
     }
+    .w-lg-auto {
+        width: auto !important;
+    }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
