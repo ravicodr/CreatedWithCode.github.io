@@ -117,8 +117,7 @@ header {
     position: absolute;
     content: 'X';
     font-weight: bolder;
-    border: 1px solid black;
-    border-radius: 30px;
+    border: none;
     line-height: 40px;
     width: 100%;
     height: 100%;

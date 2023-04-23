@@ -1,0 +1,773 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    overflow: overlay;
+    line-height:1;
+    background: #FFFDFA;
+}
+*::-webkit-scrollbar {
+    position: relative;
+    z-index: 9999;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #ED1C24;
+    border-radius: 10px;
+    border: #FFFDFA 2px solid;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* 
+------------------------------
+------Main Styling Starts Here
+------------------------------
+*/
+
+/* 
+-----------------------------
+Font Styling
+-----------------------------
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@font-face {
+    font-family: 'Metropolis', sans-serif;
+    src: url('../fonts/metropolis/Metropolis-Black.woff2');
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'Metropolis', sans-serif;
+    src: url('../fonts/metropolis/Metropolis-ExtraBold.woff2');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Metropolis', sans-serif;
+    src: url('../fonts/metropolis/Metropolis-Bold.woff2');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Metropolis', sans-serif;
+    src: url('../fonts/metropolis/Metropolis-SemiBold.woff2');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Metropolis', sans-serif;
+    src: url('../fonts/metropolis/Metropolis-Medium.woff2');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Metropolis', sans-serif;
+    src: url('../fonts/metropolis/Metropolis-Regular.woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Metropolis', sans-serif;
+    src: url('../fonts/metropolis/Metropolis-Light.woff2');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Metropolis', sans-serif;
+    src: url('../fonts/metropolis/Metropolis-ExtraLight.woff2');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'Metropolis', sans-serif;
+    src: url('../fonts/metropolis/Metropolis-Thin.woff2');
+    font-weight: 100;
+}
+
+html {
+    height: 100vh;
+    font-size: 24px;
+    font-weight: 400;
+}
+.metropolis {
+    font-family: 'Metropolis', sans-serif;
+}
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+.open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    font-size: 2rem;
+}
+p {
+    font-size: 0.8rem;
+}
+.fw-900 {
+    font-weight: 900 ;
+}  
+.fw-800 {
+    font-weight: 800;
+} 
+.fw-700 {
+    font-weight: 700;
+}
+.fw-600 {
+    font-weight: 600;
+}
+.fw-500 {
+    font-weight: 500 !important;
+}
+.fw-400 {
+    font-weight: 400;
+}
+.fw-300 {
+    font-weight: 300;
+}
+.fw-200 {
+    font-weight: 200;
+}
+.fw-100 {
+    font-weight: 100;
+}
+.f-small {
+    font-size: 0.6rem;
+}
+.lh-100 {
+    line-height: 1rem;
+}
+.lh-125 {
+    line-height: 1.25rem;
+}
+.lh-150 {
+    line-height: 1.50rem;
+}
+.lh-175 {
+    line-height: 1.75rem;
+}
+.lh-200 {
+    line-height: 2rem;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+}
+
+/* mall devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+
+}
+
+/* 
+-----------------------------
+Bootstrap Overrides
+-----------------------------
+*/
+.btn-primary {
+    height: 36px;
+    font-size: 0.66rem;
+    line-height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ED1C24;
+    border: none;
+    border-radius: 10px;
+    min-width: 5.5rem;
+}
+.btn-primary:hover {
+    background: #ED1C24;
+    /* background-color: #FFFFFF;
+    border: 1px solid #ED1C24;
+    color: #ED1C24; */
+}
+.btn-outline-primary {
+    border-color: #ED1C24;
+    color: #ED1C24;
+    font-size: 0.66rem;
+    border-radius: 12px;
+}
+.btn-outline-primary:hover {
+    border-color: #ED1C24;
+    color: #F7F7F7;
+    background: linear-gradient(88.12deg, #ED1C24 -21.06%, #ED1C24 32.88%, #FA6E75 100%);
+    box-shadow: #fa6e75c7 1px 3px 20px 0px;
+}
+.btn-outline-grey {
+    width: 153px;
+    height: 38px;
+    line-height: 80%;
+    border: 1px solid #5C5C5C;
+    border-radius: 5px;
+}
+.btn-outline-grey:hover {
+    box-shadow: #dfdfdf 0px 0px 20px 0px;
+}
+.btn-outline-grey:focus {
+    box-shadow: none;
+}
+.txt-accent {
+    color: #ED1C24;
+}
+.txt-brown {
+    color: #4A0306;
+}
+.border-blur-orange {
+    border-radius: 100%;
+    box-shadow: rgba(255, 76, 84, 0.2) 0px 0px 20px 14px;
+}
+.border-100 {
+    border-radius: 100%;
+}
+
+/* 
+-----------------------------
+Header & Navbar
+-----------------------------
+*/
+header {
+    padding: 23px 125.2px 0px;
+    padding-bottom: 0;
+    height: 87px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+}
+header .navbar {
+    padding-top: 0;
+}
+header .navbar-brand {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+header .navbar-nav {
+    font-size: 0.66rem;
+    line-height: 1rem;
+    padding: 9px 28px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(255, 76, 84, 0.16);
+    border-radius: 12px;
+}
+header .search-btn {
+    border-radius: 12px;
+    width: 52px;
+    height: 54px;
+    box-shadow: 0px 4px 14px rgba(255, 76, 84, 0.16);
+}
+header .navbar-toggler {
+    border: none;
+}
+header .navbar-toggler:focus {
+    box-shadow: none;
+    background: none;   
+}
+
+header .navbar-toggler.active svg path:nth-child(3) {
+    transform: rotate(45deg) translate(8px, -13px);
+}
+header .navbar-toggler.active svg path:nth-child(2) {
+    display: none;
+}
+header .navbar-toggler.active svg path:nth-child(4) {
+    transform: rotate(-45deg) translate(-21px, 2px);
+}
+.header-bottom {
+    position: fixed;
+    width: calc(100vw - 4px);
+    margin: 0 2px;
+    bottom: 40px;
+    left: 0px;
+    height: 64px;
+    font-size: 0.6rem;
+    z-index: 9999;
+    background-color: #FFFFFF;
+}
+
+@media (max-width: 767.98px) {
+    header {
+        padding: 20px 24px;
+    }
+    header .navbar-collapse {
+        flex-grow: 0;
+    }
+    header .navbar {
+        width: calc(100vw - 48px);
+    }
+    .header-bottom {
+        bottom: 20px;
+    }
+}
+
+@media (min-width: 767.98px) {
+    header .navbar-collapse {
+        flex-grow: 0;
+    }
+    header .navbar-brand img {
+        width: 35px;
+        height: 28px;
+    }
+    header .navbar-nav {
+        position: relative;
+        left: -4rem;
+    }
+}
+@media (max-width: 1199.98px) {
+    header .navbar-nav {
+        left: -1rem;
+    }
+}
+@media (max-width: 1399.98px) {
+    header .navbar-nav {
+        left: -3rem;
+    }
+}
+
+/* 
+-----------------------------
+Hero Section
+-----------------------------
+*/
+section > div{
+    flex: 1;
+}
+.hero {
+
+}
+.hero-left {
+    position: relative;
+}
+.hero h1 {
+    font-size: 2rem;
+}
+.hero .thriving-underline {
+    position: relative;
+}
+.hero .thriving-underline svg {
+    position: absolute;
+    bottom: -10px;
+    right: 0px;
+}
+.hero-left img {
+    position: absolute;
+    top: 12vh;
+}
+.hero .swiper {
+    position: relative;
+    width: 400px;
+    height: 480px;
+}
+.hero-swiper .swiper-wrapper {
+    
+}
+.hero .swiper-slide {
+    margin: 10px 5px;
+}
+.hero .swiper-pagination {
+    right: 10px;
+}
+@media (max-width: 575.98px) {
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    .hero .thriving-underline svg {
+        transform: scale(0.6);
+        bottom: -6px;
+        right: -1.4rem;
+    }
+}
+/* 
+-----------------------------
+Hero Swiper Cards
+-----------------------------
+*/
+.card-sl {
+    border-radius: 29px;
+    min-width: 290px;
+    max-width: 360px;
+    min-height: 382px;
+    box-shadow: 0px 4px 22px rgba(237, 28, 36, 0.1);
+}
+
+.card-image img {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 8px 8px 0px 0;
+}
+
+.card-action:hover {
+    animation: pulse 1.5s infinite;
+    -webkit-animation: pulse 1.5s infinite;
+}
+
+.card-heading {
+    font-size: 18px;
+    font-weight: bold;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 29px 29px 0px 0px;
+}
+.card-heading.featured {
+    padding-top: 0px;
+}
+
+.card-text {
+    padding: 10px 15px;
+    background: #fff;
+    font-size: 14px;
+    color: #636262;
+    border-radius: 0px 0px 29px 29px;
+}
+
+.card-button {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0px;
+    width: 100%;
+    background: linear-gradient(162.92deg, #ED1C24 10.6%, #FF787D 129.85%);
+    color: #fff;
+    border-radius: 0px 0px 29px 29px;
+}
+.card-sl a:hover {
+    color: #F7F7F7;
+}
+.card-sl h2 {
+    font-size: 1rem;
+}
+
+
+@-webkit-keyframes pulse {
+    0% {
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    70% {
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+    }
+
+    100% {
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+    }
+}
+
+/* 
+-----------------------------
+Programs Offered
+-----------------------------
+*/
+#ex1 {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 40px rgba(237, 28, 36, 0.08);
+    border-radius: 35px;
+    height: 65px !important;
+}
+#ex1 .nav-link {
+    font-size: 0.7rem;
+}
+#ex1 .nav-link.active {
+    position: relative;
+    border: none;
+    color: #FA3939;
+}
+#ex1 .nav-tabs {
+    border-bottom: none;
+}
+#ex1 .nav-link {
+    color: #414141;
+    font-weight: 600;
+    border: none;
+}
+#ex1 .nav-link.active::before {
+    position: absolute;
+    bottom: 5px;
+    display: block;
+    content: '';
+    width: 80%;
+    left: 10%;
+    height: 2px;
+    background-color: #FA6E75;
+}
+#ex1 .nav-link:focus-visible {
+    outline: none;
+}
+#ex1 .nav-link::not(.active):hover {
+    border: none;
+    filter: brightness(80%);
+}
+#ex1+.tab-content .card-sl {
+    width: 28%;
+}
+@media (max-width: 575.98px) {
+    #ex1+.tab-content .card-sl {
+        width: 100%;
+        min-height: 198px;
+    }
+    #ex1+.tab-content .card-sl img {
+        width: 48px;
+        height: 48px;
+    }
+    .card-sl {
+        position: relative;
+    }
+    #ex1+.tab-content .card-text {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        background-color: transparent;
+    }
+    #ex1+.tab-content .card-sl .card-text > p:first-child {
+        /* position: relative;
+        top: -40px; */
+    }
+}
+
+/* 
+-----------------------------
+Students success stories
+-----------------------------
+*/
+.card-ml {
+    border-radius: 29px;
+    min-width: 290px;
+    max-width: 314px;
+    min-height: 382px;
+    box-shadow: 0px 4px 22px rgba(237, 28, 36, 0.1);
+}
+.card-ml a:hover {
+    color: #F7F7F7;
+}
+.card-ml h2 {
+    font-size: 1rem;
+}
+.success-swiper {
+    position: relative;
+    height: fit-content;
+    min-height: 520px;
+}
+.success-swiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.success-swiper .swiper-pagination {
+    bottom: -10px;
+}
+@media (max-width: 575.98px) {
+    .success-stories .card-sl {
+        max-width: none;
+        width: 100%;
+    }
+    .success-swiper .swiper-slide {
+        max-width: 314px;
+    }
+    .success-stories .swiper-wrapper {
+        padding-left: 40px;
+    }
+}
+/* 
+-----------------------------
+Recruitment Partners
+-----------------------------
+*/
+.recruiter-swiper {
+    position: relative;
+    height: 42vh;
+    min-height: 346px;
+}
+.recruiter-swiper .swiper-slide .col-6 {
+    display: flex;
+    align-items: center;
+}
+.recruiter-swiper .swiper-pagination {
+    bottom: 0px;
+}
+.swiper-button-prev {
+    left: 0px;
+    top: 35%;
+    color: black;
+    width: 36px;
+}
+.swiper-button-next {
+    right: 0px;
+    top: 35%;
+    color: black;
+    width: 36px;
+}
+@media (max-width: 575.98px) {
+    .recruiter-swiper .swiper-slide .row > div {
+        width: 45%;
+    }
+    .recruiter-swiper .swiper-slide .row {
+        gap: 10%;
+    }
+    .recruiter-swiper .swiper-pagination {
+        bottom: 82px;
+    }
+}
+/* 
+-----------------------------
+What Students Say
+-----------------------------
+*/
+.review-swiper {
+    position: relative;
+    height: 80vh;
+
+}
+.review-swiper .card-sl {
+    max-width: 300px;
+    height: 413px;
+}
+.review-swiper .card-sl .f-small {
+    font-size: 0.7rem !important;
+}
+.review-swiper .swiper-pagination {
+    bottom: 80px;
+}
+/* 
+-----------------------------
+Placement Assistance
+-----------------------------
+*/
+.placement-assistance > div:nth-child(2) {
+    min-height: 70vh;
+    gap: 30px;
+}
+.placement-assistance .card-sl {
+    position: relative;
+    min-width: 280px;
+    max-width: 313px;
+    max-height: 330px;
+    min-height: 200px;
+}
+@media (max-width: 767.98px) {
+    .placement-assistance .card-sl {
+        min-height: 200px;
+        box-shadow: none;
+    }
+    .placement-assistance .card-text .f-small {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+}
