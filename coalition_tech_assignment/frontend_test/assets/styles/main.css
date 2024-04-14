@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+  
+/*--------------------------------- 
+COMMONS
+---------------------------------*/
+section h4 {
+    font-size: 136px;
+    color:rgba(65, 79, 107, 0.502);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+section h4 span {
+    position: relative;
+    top: -30px;
+    left: -30px;
+    font-size: 32px;
+    color: #414f6b;
+}
+section h4 span::after {
+    content: '';
+    position: absolute;
+    background-color: #414f6b;
+    width: 20px;
+    height: 20px;
+    bottom: -20px;
+    left: 0px;
+}
+section p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+h5 {
+    font-size: 32px;
+    color: #414f6b;
+    font-weight: 700;
+    font-family: "Oswald";
+}
+td {
+    color: #000;
+    font-weight: 300;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #414f6b;
+    color: #b0b4be;
+}
+
+
+/*--------------------------------- 
+STICKY HEADER
+---------------------------------*/
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0vh;
+    height: 80px;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+header .nav-item a {
+    color: #414f6b;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 12px;
+    border-bottom: 1px solid #414f6b;
+    padding-bottom: 1px !important;
+}
+
+/*--------------------------------- 
+HERO SECTION
+---------------------------------*/
+#hero {
+    height: 100vh;
+    background: url('../media/images/mountains_full.png') center top / cover no-repeat;
+    background-attachment: fixed;
+}
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('../media/images/mountains_front.png') center top / cover no-repeat;
+    z-index: 3;
+    pointer-events: none;
+}
+
+#hero .nav-item a {
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 12px;
+    border-bottom: 1px solid white;
+    padding-bottom: 1px !important;
+}
+#hero nav {
+    position: relative;
+    z-index: 999;
+}
+
+#hero .content {
+    margin-top: 13vw;
+    text-align: justify;
+}
+
+#hero h2 {
+    font-family: 'Bebas', sans-serif;
+    font-size: 60px;
+    color: #4d4d4d;
+    letter-spacing: -2px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#hero h2+h2 {
+    margin-top: 0px;
+    font-size: 70px;
+    color: #414f6b;
+}
+
+@media screen and (min-width: 576px) {
+    #hero h2 {
+        font-size: 80px;
+        letter-spacing: -4px;
+    }
+    #hero h2+h2 {
+        font-size: 93px;
+    }
+}
+@media screen and (min-width: 768px) {
+    #hero h2 {
+        text-align: left
+    }
+}
+@media screen and (min-width: 992px) {
+    #hero h2 {
+        font-size: 100px;
+        letter-spacing: -8px;
+        text-align: left;
+    }
+    #hero h2+h2 {
+        margin-top: -45px;
+        font-size: 115px;
+    }
+}
+
+/*--------------------------------- 
+HISTORY SECTION
+---------------------------------*/
+#history {
+    position: relative;
+    height: calc(100vh - 80px);
+    background: url('../media/images/peak.png') center top / cover no-repeat;
+}
+#history .swiper {
+    width: 100%;
+    height: 195px;
+    overflow: hidden;
+}
+#history .swiper-pagination-bullet {
+    background-color: #fff;
+    opacity: 0.2;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+}
+#history .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+#history .swiper-bg {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 195px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(26, 46, 86, 0.551);
+}
+
+/*--------------------------------- 
+TEAM SECTION
+---------------------------------*/
+#team {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+}
+#team .tab-root {
+    background-color: #414f6b;
+}
+#team .nav-tabs .nav-link {
+    border-radius: 0px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Oswald", sans-serif;
+    text-decoration: underline;
+    color: #b0b4be;
+    border: none;
+}
+#team .nav-tabs .nav-link.active {
+    background-color: #b0b4be;
+    color: #414f6b;
+}
+#team .tab-content {
+    flex-grow: 1;
+}
+#team .tab-pane {
+    width: 100%;
+    height: 100%;
+    background-position: center bottom;
+    background-size: cover;
+}
+#team .schedule-table {
+    background-color: rgba(255,255,255,0.702);
+}
+#team table  * {
+    background-color: transparent
+}
+
+/*--------------------------------- 
+FOOTER
+---------------------------------*/
+footer {
+    background: #414f6b;
+}
+footer p {
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #63769d;
+    font-weight: 900;
+    font-style: italic;
+    font-family: "Lato", sans-serif;
+}
