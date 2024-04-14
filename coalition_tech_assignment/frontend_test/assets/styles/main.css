@@ -183,6 +183,12 @@ HISTORY SECTION
     transform: translateX(-50%);
     background-color: rgba(26, 46, 86, 0.551);
 }
+#history .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
 
 /*--------------------------------- 
 TEAM SECTION
